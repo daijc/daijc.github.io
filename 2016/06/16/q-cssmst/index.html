@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>CSS常见面试题 | Xiao Xiao</title>
+  <meta name="description" content="记录生活点滴，留存过往记忆" />
+  <meta name="keywords" content="前端面试题,小草无根,花开无心,落叶无根" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="Xiao Xiao">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="HTML和CSS1、常用浏览器的内核分别是什么?12345IE: trident 内核Firefox：gecko 内核Safari:webkit 内核Opera:以前是 presto 内核，Opera 现已改用 Google Chrome 的 Blink 内核Chrome:Blink(基于 webkit，Google 与 Opera Software 共同开发)">
+<meta name="keywords" content="前端,面试题,Div+css,Html5+css3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS常见面试题">
+<meta property="og:url" content="https://daijc.github.io/2016/06/16/q-cssmst/index.html">
+<meta property="og:site_name" content="Xiao Xiao">
+<meta property="og:description" content="HTML和CSS1、常用浏览器的内核分别是什么?12345IE: trident 内核Firefox：gecko 内核Safari:webkit 内核Opera:以前是 presto 内核，Opera 现已改用 Google Chrome 的 Blink 内核Chrome:Blink(基于 webkit，Google 与 Opera Software 共同开发)">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-08-21T02:30:53.972Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS常见面试题">
+<meta name="twitter:description" content="HTML和CSS1、常用浏览器的内核分别是什么?12345IE: trident 内核Firefox：gecko 内核Safari:webkit 内核Opera:以前是 presto 内核，Opera 现已改用 Google Chrome 的 Blink 内核Chrome:Blink(基于 webkit，Google 与 Opera Software 共同开发)">
+
+  <link rel="shortcut icon" href="" />
+  <link rel="icon" href="" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script>
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				<!-- <i class="fa fa-home"></i> -->
+				Xiao Xiao
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								<i class="fa fa-home"></i>
+								主页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-projects' href='/categories/前端'>
+								<i class="fa fa-cube"></i>
+								前端
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-blogs' href='/categories/随笔'>
+								<i class="fa fa-heart"></i>
+								随笔
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								<i class="fa fa-archive"></i>
+								归档
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon"><i class="fa fa-search"></i></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><i class="fa fa-search flat-box"></i></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><i class="fa fa-navicon flat-box"></i></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'></a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><i class="fa fa-comments flat-box"></i></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><i class="fa fa-arrow-up flat-box"></i></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><i class="fa fa-list-ul flat-box"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				<i class="fa fa-home"></i>
+				主页
+			</a>
+		
+			<a href="/categories/前端" class="nav-projects nav">
+				<i class="fa fa-cube"></i>
+				前端
+			</a>
+		
+			<a href="/categories/随笔" class="nav-blogs nav">
+				<i class="fa fa-heart"></i>
+				随笔
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				<i class="fa fa-archive"></i>
+				归档
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-q-cssmst" class="post white-box article-type-post" itemscope itemprop="blogPost">
+    <section class='meta'>
+        <h2 class="title">
+            <a href="/2016/06/16/q-cssmst/">
+                
+                    CSS常见面试题
+                
+            </a>
+        </h2>
+        <time>
+            2016-06-16 星期四&nbsp;&nbsp;
+            <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/前端/">前端</a>
+    </div>
+
+
+    </section>
+    
+        <section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML和CSS"><span class="toc-text">HTML和CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、常用浏览器的内核分别是什么"><span class="toc-text">1、常用浏览器的内核分别是什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、HTML文件里Doctype是干什么的？"><span class="toc-text">2、HTML文件里Doctype是干什么的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Quirks模式是什么？它和-tandards-模式有什么区别？"><span class="toc-text">3、Quirks模式是什么？它和 tandards 模式有什么区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、div-css-的布局较-table-布局有什么优点？"><span class="toc-text">4、div+css 的布局较 table 布局有什么优点？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、img的alt与title-有何异同？strong与em的异同？"><span class="toc-text">5、img的alt与title 有何异同？strong与em的异同？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、渐进增强和优雅降级之间有什么不同？"><span class="toc-text">6、渐进增强和优雅降级之间有什么不同？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、为什么利用多个域名来存储网站资源会更有效？"><span class="toc-text">7、为什么利用多个域名来存储网站资源会更有效？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8、网页标准和标准制定机构重要性的理解。"><span class="toc-text">8、网页标准和标准制定机构重要性的理解。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9、cookies，sessionStorage-和-localStorage-的区别"><span class="toc-text">9、cookies，sessionStorage 和 localStorage 的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10、src-与-href-的区别"><span class="toc-text">10、src 与 href 的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11、网页制作会用到的图片格式有哪些？"><span class="toc-text">11、网页制作会用到的图片格式有哪些？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12、什么是微格式吗？在前端构建中应该考虑微格式吗？"><span class="toc-text">12、什么是微格式吗？在前端构建中应该考虑微格式吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13、一次js请求一般情况下有哪些地方会有缓存处理？"><span class="toc-text">13、一次js请求一般情况下有哪些地方会有缓存处理？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14、一个页面上有大量的图片，加载很慢，怎么优化这些图片的加载给用户更好的体验。"><span class="toc-text">14、一个页面上有大量的图片，加载很慢，怎么优化这些图片的加载给用户更好的体验。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15、你如何理解-HTML-结构的语义化？"><span class="toc-text">15、你如何理解 HTML 结构的语义化？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16、做好-SEO-需要考虑什么？"><span class="toc-text">16、做好 SEO 需要考虑什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17、怎么对一个-DOM-设置它的-CSS-样式？"><span class="toc-text">17、怎么对一个 DOM 设置它的 CSS 样式？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18、CSS-都有哪些选择器？"><span class="toc-text">18、CSS 都有哪些选择器？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19、定义一个-DOM-元素不显示在浏览器可视范围内？"><span class="toc-text">19、定义一个 DOM 元素不显示在浏览器可视范围内？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20、超链接访问过后-hover-样式就不出现的问题是什么？"><span class="toc-text">20、超链接访问过后 hover 样式就不出现的问题是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21、什么是-Css-Hack？ie6-7-8-的-hack-分别是什么？"><span class="toc-text">21、什么是 Css Hack？ie6,7,8 的 hack 分别是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23、行内元素和块级元素的区别是什么？行内元素的-padding-和-margin-可设置吗？"><span class="toc-text">23、行内元素和块级元素的区别是什么？行内元素的 padding 和 margin 可设置吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24、什么是外边距重叠？重叠的结果是什么？"><span class="toc-text">24、什么是外边距重叠？重叠的结果是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#26、rgba-和-opacity-的透明效果有什么不同？"><span class="toc-text">26、rgba()和 opacity 的透明效果有什么不同？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#27、让文字在垂直和水平方向上重叠的两个属性是什么？"><span class="toc-text">27、让文字在垂直和水平方向上重叠的两个属性是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#28、如何垂直居中一个浮动元素？"><span class="toc-text">28、如何垂直居中一个浮动元素？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#29、px-和-em-的区别"><span class="toc-text">29、px 和 em 的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#30、”reset”的-CSS-文件如何使用？和-normalize-css-的不同之处？"><span class="toc-text">30、”reset”的 CSS 文件如何使用？和 normalize.css 的不同之处？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#31、Sass、LESS-是什么？为什么要使用他们？"><span class="toc-text">31、Sass、LESS 是什么？为什么要使用他们？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#32、display-none-与-visibility-hidden-的区别是什么？"><span class="toc-text">32、display:none 与 visibility:hidden 的区别是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#33、CSS-中-link-和-import-的区别是："><span class="toc-text">33、CSS 中 link 和@import 的区别是：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#34、BFC-是什么"><span class="toc-text">34、BFC 是什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#35、HTML-与-XHTML——二者有什么区别？"><span class="toc-text">35、HTML 与 XHTML——二者有什么区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#36、html-常见兼容性问题？"><span class="toc-text">36、html 常见兼容性问题？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#37、对-WEB-标准以及-W3C-的理解与认识"><span class="toc-text">37、对 WEB 标准以及 W3C 的理解与认识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#38、行内元素、块级元素、空-void-元素有哪些-CSS-的盒模型"><span class="toc-text">38、行内元素、块级元素、空(void)元素有哪些?CSS 的盒模型?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#39、前端页面有哪三层构成，分别是什么-作用是什么"><span class="toc-text">39、前端页面有哪三层构成，分别是什么?作用是什么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#40、Doctype-作用-严格模式与混杂模式区分它们有何意义"><span class="toc-text">40、Doctype 作用? 严格模式与混杂模式区分它们有何意义?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#41、b-标签和-strong-标签-i-标签和-em-标签的区别？"><span class="toc-text">41、b 标签和 strong 标签,i 标签和 em 标签的区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#42、CSS-选择符有哪些？哪些属性可以继承？优先级算法如何计算？"><span class="toc-text">42、CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5和CSS3"><span class="toc-text">HTML5和CSS3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、CSS3-有哪些新特性？"><span class="toc-text">1、CSS3 有哪些新特性？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、html5-有哪些新特性、移除了那些元素？如何区分-HTML-和-HTML5？"><span class="toc-text">2、html5 有哪些新特性、移除了那些元素？如何区分 HTML 和 HTML5？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、如何实现浏览器内多个标签页之间的通信"><span class="toc-text">4、如何实现浏览器内多个标签页之间的通信?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、你如何对网站的文件和资源进行优化？"><span class="toc-text">5、你如何对网站的文件和资源进行优化？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、什么是响应式设计？"><span class="toc-text">6、什么是响应式设计？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、新的-HTML5-文档类型和字符集是？"><span class="toc-text">7、新的 HTML5 文档类型和字符集是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8、HTML5-Canvas-元素有什么用？"><span class="toc-text">8、HTML5 Canvas 元素有什么用？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9、HTML5-存储类型有什么区别？"><span class="toc-text">9、HTML5 存储类型有什么区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10、CSS3-新增伪类有那些？"><span class="toc-text">10、CSS3 新增伪类有那些？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11、前端应该如何高质量完成工作"><span class="toc-text">11、前端应该如何高质量完成工作?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12、css中content属性的作用"><span class="toc-text">12、css中content属性的作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13、在HTML5页面中嵌入音频"><span class="toc-text">13、在HTML5页面中嵌入音频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14、在HTML5页面中嵌入视频"><span class="toc-text">14、在HTML5页面中嵌入视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15、写一个css3幻灯片效果页面"><span class="toc-text">15、写一个css3幻灯片效果页面</span></a></li></ol></li></ol></section>
+    
+    <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="HTML和CSS"><a href="#HTML和CSS" class="headerlink" title="HTML和CSS"></a>HTML和CSS</h2><h3 id="1、常用浏览器的内核分别是什么"><a href="#1、常用浏览器的内核分别是什么" class="headerlink" title="1、常用浏览器的内核分别是什么?"></a>1、常用浏览器的内核分别是什么?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">IE: trident 内核</span><br><span class="line">Firefox：gecko 内核</span><br><span class="line">Safari:webkit 内核</span><br><span class="line">Opera:以前是 presto 内核，Opera 现已改用 Google Chrome 的 Blink 内核</span><br><span class="line">Chrome:Blink(基于 webkit，Google 与 Opera Software 共同开发)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="2、HTML文件里Doctype是干什么的？"><a href="#2、HTML文件里Doctype是干什么的？" class="headerlink" title="2、HTML文件里Doctype是干什么的？"></a>2、HTML文件里Doctype是干什么的？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE&gt; 声明位于文档中的最前面的位置，处于 &lt;html&gt; 标签之前。</span><br><span class="line">此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。（重点：告诉浏览器按照何种规范解析页面）</span><br></pre></td></tr></table></figure>
+<h3 id="3、Quirks模式是什么？它和-tandards-模式有什么区别？"><a href="#3、Quirks模式是什么？它和-tandards-模式有什么区别？" class="headerlink" title="3、Quirks模式是什么？它和 tandards 模式有什么区别？"></a>3、Quirks模式是什么？它和 tandards 模式有什么区别？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">从 IE6 开始，引入了 Standards 模式，标准模式中，浏览器尝试给符合标准的文档在规范上的正确处理达到在指定浏览器中的程度。</span><br><span class="line">在 IE6 之前 CSS 还不够成熟，所以 IE5 等之前的浏览器对 CSS 的支持很差， IE6 将对 CSS提供更好的支持，</span><br><span class="line">然而这时的问题就来了，因为有很多页面是基于旧的布局方式写的，而如果 IE6 支持 CSS 则将令这些页面显示不正常，如何在即保证不破坏现有页面，又提供新的渲染机制呢？</span><br><span class="line">在写程序时我们也会经常遇到这样的问题，如何保证原来的接口不变，又提供更强大的功能，尤其是新功能不兼容旧功能时。遇到这种问题时的一个常见做法是增加参数和分支，即当某个参数为真时，我们就使用新功能，而如果这个参数 不为真时，就使用旧功能，这样就能不破坏原有的程序，又提供新功能。IE6 也是类似这样做的，它将 DTD 当成了这个“参数”，因为以前的页面大家都不会去写 DTD，所以 IE6 就假定 如果写了 DTD，就意味着这个页面将采用对 CSS 支持更好的布局，而如果没有，则采用兼容之前的布局方式。这就是 Quirks模式（怪癖模式，诡异模式，怪异模式）。</span><br><span class="line">区别：总体会有布局、样式解析和脚本执行三个方面的区别。</span><br><span class="line">盒模型：在 W3C 标准中，如果设置一个元素的宽度和高度，指的是元素内容的宽度和高度，而在 Quirks 模式下，IE 的宽度和高度还包含了 padding 和 border。</span><br><span class="line">设置行内元素的高宽：在 Standards 模式下，给&lt;span&gt;等行内元素设置 wdith 和 height 都不会生效，而在 quirks 模式下，则会生效。</span><br><span class="line">设置百分比的高度：在 standards 模式下，一个元素的高度是由其包含的内容来决定的，如果父元素没有设置百分比的高度，子元素设置一个百分比的高度是无效的用</span><br><span class="line">margin:0 auto 设置水平居中：使用 margin:0 auto 在 standards 模式下可以使元素水平</span><br><span class="line">居中，但在 quirks 模式下却会失效。（还有很多，答出什么不重要，关键是看他答出的这些是不是自己经验遇到的，还是说都是看文章看的，甚至完全不知道。）</span><br></pre></td></tr></table></figure>
+<h3 id="4、div-css-的布局较-table-布局有什么优点？"><a href="#4、div-css-的布局较-table-布局有什么优点？" class="headerlink" title="4、div+css 的布局较 table 布局有什么优点？"></a>4、div+css 的布局较 table 布局有什么优点？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">改版的时候更方便 只要改 css 文件。</span><br><span class="line">页面加载速度更快、结构化清晰、页面显示简洁。</span><br><span class="line">表现与结构相分离。</span><br><span class="line">易于优化（seo）搜索引擎更友好，排名更容易靠前。</span><br></pre></td></tr></table></figure>
+<h3 id="5、img的alt与title-有何异同？strong与em的异同？"><a href="#5、img的alt与title-有何异同？strong与em的异同？" class="headerlink" title="5、img的alt与title 有何异同？strong与em的异同？"></a>5、img的alt与title 有何异同？strong与em的异同？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a:alt(alt text):为不能显示图像、窗体或 applets 的用户代理（UA），alt 属性用来指定替换文字。替换文字的语言由 lang 属性指定。(在 IE 浏览器下会在没有 title 时把 alt当成 tool tip 显示)</span><br><span class="line">title(tool tip):该属性为设置该属性的元素提供建议性的信息。</span><br><span class="line">strong:粗体强调标签，强调，表示内容的重要性</span><br><span class="line">em:斜体强调标签，更强烈强调，表示内容的强调点</span><br></pre></td></tr></table></figure>
+<h3 id="6、渐进增强和优雅降级之间有什么不同？"><a href="#6、渐进增强和优雅降级之间有什么不同？" class="headerlink" title="6、渐进增强和优雅降级之间有什么不同？"></a>6、渐进增强和优雅降级之间有什么不同？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</span><br><span class="line">优雅降级 graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</span><br><span class="line">区别：优雅降级是从复杂的现状开始，并试图减少用户体验的供给，而渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要。降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带。</span><br><span class="line">“优雅降级”观点认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段，并把测试对象限定为主流浏览器（如 IE、Mozilla 等）的前一个版本。</span><br><span class="line">在这种设计范例下，旧版的浏览器被认为仅能提供“简陋却无妨 (poor, but passable)” 的浏览体验。你可以做一些小的调整来适应某个特定的浏</span><br><span class="line">览器。但由于它们并非我们所关注的焦点，因此除了修复较大的错误之外，其它的差异将被直接忽略。</span><br><span class="line">“渐进增强”观点则认为应关注于内容本身。内容是我们建立网站的诱因。有的网站展示它，有的则收集它，有的寻求，有的操作，还有的网站甚至会包含以上的种种，但相同点是它们全都涉及到内容。这使得“渐进增强”成为一种更为合理的设计范例。这也是它立即被 Yahoo! 所采纳并用以构建其“分级式浏览器支持 (Graded Browser Support)”策略的原因所在。那么问题来了。现在产品经理看到 IE6,7,8 网页效果相对高版本现代浏览器少了很多圆角，阴影（CSS3），要求兼容（使用图片背景，放弃 CSS3）</span><br></pre></td></tr></table></figure>
+<h3 id="7、为什么利用多个域名来存储网站资源会更有效？"><a href="#7、为什么利用多个域名来存储网站资源会更有效？" class="headerlink" title="7、为什么利用多个域名来存储网站资源会更有效？"></a>7、为什么利用多个域名来存储网站资源会更有效？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CDN 缓存更方便</span><br><span class="line">突破浏览器并发限制</span><br><span class="line">节约 cookie 带宽</span><br><span class="line">节约主域名的连接数，优化页面响应速度</span><br><span class="line">防止不必要的安全问题</span><br></pre></td></tr></table></figure>
+<h3 id="8、网页标准和标准制定机构重要性的理解。"><a href="#8、网页标准和标准制定机构重要性的理解。" class="headerlink" title="8、网页标准和标准制定机构重要性的理解。"></a>8、网页标准和标准制定机构重要性的理解。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">网页标准和标准制定机构都是为了能让 web 发展的更‘健康’，开发者遵循统一的标准，降低开发难度，开发成本，SEO 也会更好做，也不会因为滥用代码导致各种 BUG、安全问题，最终提高网站易用性。</span><br></pre></td></tr></table></figure>
+<h3 id="9、cookies，sessionStorage-和-localStorage-的区别"><a href="#9、cookies，sessionStorage-和-localStorage-的区别" class="headerlink" title="9、cookies，sessionStorage 和 localStorage 的区别"></a>9、cookies，sessionStorage 和 localStorage 的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sessionStorage （session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此 sessionStorage 不是一种持久化的本地存储，仅仅是会话级别的存储。</span><br><span class="line">而 localStorage 用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</span><br><span class="line">Web Storage 的概念和 cookie 相似，区别是它是为了更大容量存储设计的。</span><br><span class="line">Cookie 的大小是受限的，并且每次你请求一个新的页面的时候 Cookie 都会被发送过去，这样无形中浪费了带宽，另外 cookie 还需要指定作用域，不可以跨域调用。</span><br><span class="line">除此之外，Web Storage 拥有 setItem,getItem,removeItem,clear 等方法，不像 cookie需要前端开发者自己封装 setCookie，getCookie。但是 Cookie 也是不可以或缺的：Cookie的作用是与服务器进行交互，作为 HTTP 规范的一部分而存在 ，而 Web Storage 仅仅是为了在本地“存储”数据而生。</span><br></pre></td></tr></table></figure>
+<h3 id="10、src-与-href-的区别"><a href="#10、src-与-href-的区别" class="headerlink" title="10、src 与 href 的区别"></a>10、src 与 href 的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">src 用于替换当前元素，href 用于在当前文档和引用资源之间确立联系。</span><br><span class="line">src 是 source 的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求 src 资源时会将其指向的资源下载并应用到文档内，例如 js 脚本，img 图片和 frame 等元素。</span><br><span class="line">当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js 脚本放在底部而不是头部。</span><br><span class="line">href 是 Hypertext Reference 的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接，如果我们在文档中添加那么浏览器会识别该文档为 css 文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用 link 方式来加载 css，而不是使用@import 方式。</span><br></pre></td></tr></table></figure>
+<h3 id="11、网页制作会用到的图片格式有哪些？"><a href="#11、网页制作会用到的图片格式有哪些？" class="headerlink" title="11、网页制作会用到的图片格式有哪些？"></a>11、网页制作会用到的图片格式有哪些？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">png-8，png-24，jpeg，gif，svg。</span><br><span class="line">但是上面的那些都不是面试官想要的最后答案。面试官希望听到是 Webp。（是否有关注新技术，新鲜事物）</span><br><span class="line">科普一下 Webp：WebP 格式，谷歌（google）开发的一种旨在加快图片加载速度的图片格式。图片压缩体积大约只有 JPEG 的 2/3，并能节省大量的服务器带宽资源和数据空间。Facebook Ebay 等知名网站已经开始测试并使用 WebP 格式。在质量相同的情况下，WebP 格式图像的体积要比 JPEG 格式图像小 40%</span><br></pre></td></tr></table></figure>
+<h3 id="12、什么是微格式吗？在前端构建中应该考虑微格式吗？"><a href="#12、什么是微格式吗？在前端构建中应该考虑微格式吗？" class="headerlink" title="12、什么是微格式吗？在前端构建中应该考虑微格式吗？"></a>12、什么是微格式吗？在前端构建中应该考虑微格式吗？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">微格式（Microformats）是一种让机器可读的语义化 XHTML 词汇的集合，是结构化数据的开放标准。是为特殊应用而制定的特殊格式。</span><br><span class="line">优点：将智能数据添加到网页上，让网站内容在搜索引擎结果界面可以显示额外的提示。（应用范例：豆瓣，有兴趣自行 google）</span><br></pre></td></tr></table></figure>
+<h3 id="13、一次js请求一般情况下有哪些地方会有缓存处理？"><a href="#13、一次js请求一般情况下有哪些地方会有缓存处理？" class="headerlink" title="13、一次js请求一般情况下有哪些地方会有缓存处理？"></a>13、一次js请求一般情况下有哪些地方会有缓存处理？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答案：dns 缓存，cdn 缓存，浏览器缓存，服务器缓存。</span><br></pre></td></tr></table></figure>
+<h3 id="14、一个页面上有大量的图片，加载很慢，怎么优化这些图片的加载给用户更好的体验。"><a href="#14、一个页面上有大量的图片，加载很慢，怎么优化这些图片的加载给用户更好的体验。" class="headerlink" title="14、一个页面上有大量的图片，加载很慢，怎么优化这些图片的加载给用户更好的体验。"></a>14、一个页面上有大量的图片，加载很慢，怎么优化这些图片的加载给用户更好的体验。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">图片懒加载，在页面上的未可视区域可以添加一个滚动条事件，判断图片位置与浏览器顶端的距离与页面的距离，如果前者小于后者，优先加载。</span><br><span class="line">如果为幻灯片、相册等，可以使用图片预加载技术，将当前展示图片的前一张和后一张优先下载。</span><br><span class="line">如果图片为 css 图片，可以使用 CSSsprite，SVGsprite，Iconfont、Base64 等技术。</span><br><span class="line">如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。</span><br><span class="line">如果图片展示区域小于图片的真实大小，则因在服务器端根据业务需要先行进行图片压缩，图片压缩后大小与展示一致。</span><br></pre></td></tr></table></figure>
+<h3 id="15、你如何理解-HTML-结构的语义化？"><a href="#15、你如何理解-HTML-结构的语义化？" class="headerlink" title="15、你如何理解 HTML 结构的语义化？"></a>15、你如何理解 HTML 结构的语义化？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">当页面样式加载失败的时候能够让页面呈现出清晰的结构</span><br><span class="line">有利于 seo 优化，利于被搜索引擎收录（更便于搜索引擎的爬虫程序来识别）</span><br><span class="line">便于项目的开发及维护，使 html 代码更具有可读性，便于其他设备解析。</span><br></pre></td></tr></table></figure>
+<h3 id="16、做好-SEO-需要考虑什么？"><a href="#16、做好-SEO-需要考虑什么？" class="headerlink" title="16、做好 SEO 需要考虑什么？"></a>16、做好 SEO 需要考虑什么？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Meta 标签优化:主要包括主题（Title)，网站描述(Description)，和关键词（Keywords）。还有一些其它的隐藏文字比如 Author（作者），Category（目录），Language（编码语种）等。</span><br><span class="line">放置关键词:关键词分析和选择是 SEO 最重要的工作之一。首先要给网站确定主关键词（一般在 5 个上下），然后针对这些关键词进行优化，包括关键词密度（Density），相关度（Relavancy），突出性（Prominency）等等。</span><br><span class="line">虽然搜索引擎有很多，但是对网站流量起决定作用的就那么几个。比如英文的主要有Google，Yahoo，Bing 等；中文的有百度，搜狗，有道等。不同的搜索引擎对页面的抓取和索引、排序的规则都不一样。还要了解各搜索门户和搜索引擎之间的关系，比如 AOL 网页搜</span><br><span class="line">索用的是 Google 的搜索技术，MSN 用的是 Bing 的技术。</span><br><span class="line">Open Directory 自身不是搜索引擎，而是一个大型的网站目录，他和搜索引擎的主要区别是网站内容的收集方式不同。目录是人工编辑的，主要收录网站主页；搜索引擎是自动收集的，除了主页外还抓取大量的内容页面。</span><br><span class="line">搜索引擎也需要生存，随着互联网商务的越来越成熟，收费的搜索引擎也开始大行其道。最典型的有 Overture 和百度，当然也包括 Google 的广告项目 Google Adwords。越来越多的人通过搜索引擎的点击广告来定位商业网站，这里面也大有优化和排名的学问，你得学会用最少的广告投入获得最多的点击。</span><br><span class="line">网站做完了以后，别躺在那里等着客人从天而降。要让别人找到你，最简单的办法就是将网站提交（submit）到搜索引擎。如果你的是商业网站，主要的搜索引擎和目录都会要求你付费来获得收录（比如 Yahoo 要 299 美元），但是好消息是（至少到目前为止）最大的搜索引</span><br><span class="line">擎 Google 目前还是免费，而且它主宰着 60％以上的搜索市场。链接交换和链接广泛度（Link Popularity）</span><br><span class="line">网页内容都是以超文本（Hypertext）的方式来互相链接的，网站之间也是如此。除了搜索引擎以外，人们也每天通过不同网站之间的链接来 Surfing（“冲浪”）。其它网站到你的网站的链接越多，你也就会获得更多的访问量。更重要的是，你的网站的外部链接数越多，会被搜索引擎认为它的重要性越大，从而给你更高的排名。</span><br><span class="line">合理的标签使用</span><br></pre></td></tr></table></figure>
+<h3 id="17、怎么对一个-DOM-设置它的-CSS-样式？"><a href="#17、怎么对一个-DOM-设置它的-CSS-样式？" class="headerlink" title="17、怎么对一个 DOM 设置它的 CSS 样式？"></a>17、怎么对一个 DOM 设置它的 CSS 样式？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">外部样式表，引入一个外部 css 文件</span><br><span class="line">内部样式表，将 css 代码放在 &lt;head&gt; 标签内部</span><br><span class="line">内联样式，将 css 样式直接定义在 HTML 元素内部</span><br></pre></td></tr></table></figure>
+<h3 id="18、CSS-都有哪些选择器？"><a href="#18、CSS-都有哪些选择器？" class="headerlink" title="18、CSS 都有哪些选择器？"></a>18、CSS 都有哪些选择器？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">派生选择器（用 HTML 标签申明）</span><br><span class="line">id 选择器（用 DOM 的 ID 申明）</span><br><span class="line">类选择器（用一个样式类名申明）</span><br><span class="line">属性选择器（用 DOM 的属性申明，属于 CSS2，IE6 不支持，不常用，不知道就算了）</span><br><span class="line">除了前 3 种基本选择器，还有一些扩展选择器，包括</span><br><span class="line">后代选择器（利用空格间隔，比如 div .a&#123; &#125;）</span><br><span class="line">群组选择器（利用逗号间隔，比如 p,div,#a&#123; &#125;）</span><br><span class="line">那么问题来了，CSS 选择器的优先级是怎么样定义的？</span><br><span class="line">基本原则：一般而言，选择器越特殊，它的优先级越高。也就是选择器指向的越准确，它的优先级就越高。</span><br></pre></td></tr></table></figure>
+<h3 id="19、定义一个-DOM-元素不显示在浏览器可视范围内？"><a href="#19、定义一个-DOM-元素不显示在浏览器可视范围内？" class="headerlink" title="19、定义一个 DOM 元素不显示在浏览器可视范围内？"></a>19、定义一个 DOM 元素不显示在浏览器可视范围内？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">基本的：设置 display 属性为 none，或者设置 visibility 属性为 hidden</span><br><span class="line">技巧性：设置宽高为 0，设置透明度为 0，设置 z-index 位置在-1000</span><br></pre></td></tr></table></figure>
+<h3 id="20、超链接访问过后-hover-样式就不出现的问题是什么？"><a href="#20、超链接访问过后-hover-样式就不出现的问题是什么？" class="headerlink" title="20、超链接访问过后 hover 样式就不出现的问题是什么？"></a>20、超链接访问过后 hover 样式就不出现的问题是什么？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">被点击访问过的超链接样式不在具有 hover 和 active 了,解决方法是改变 CSS 属性的</span><br><span class="line">排列顺序: L-V-H-A（link,visited,hover,active）</span><br></pre></td></tr></table></figure>
+<h3 id="21、什么是-Css-Hack？ie6-7-8-的-hack-分别是什么？"><a href="#21、什么是-Css-Hack？ie6-7-8-的-hack-分别是什么？" class="headerlink" title="21、什么是 Css Hack？ie6,7,8 的 hack 分别是什么？"></a>21、什么是 Css Hack？ie6,7,8 的 hack 分别是什么？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">针对不同的浏览器写不同的 CSS code 的过程，就是 CSS hack。示例如下：</span><br><span class="line">#test &#123;</span><br><span class="line">width:300px;</span><br><span class="line">height:300px;</span><br><span class="line">background-color:blue; /*firefox*/</span><br><span class="line">background-color:red\9; /*all ie*/</span><br><span class="line">background-color:yellow; /*ie8*/</span><br><span class="line">+background-color:pink; /*ie7*/</span><br><span class="line">_background-color:orange; /*ie6*/ &#125;</span><br><span class="line">:root #test &#123; background-color:purple\9; &#125; /*ie9*/</span><br><span class="line">@media all and (min-width:0px)&#123; #test &#123;background-color:black;&#125; &#125; /*opera*/</span><br><span class="line">@media screen and (-webkit-min-device-pixel-ratio:0)&#123; #test &#123;background-color:gray;&#125; &#125; /*chrome</span><br><span class="line">and safari*/</span><br></pre></td></tr></table></figure>
+<h3 id="23、行内元素和块级元素的区别是什么？行内元素的-padding-和-margin-可设置吗？"><a href="#23、行内元素和块级元素的区别是什么？行内元素的-padding-和-margin-可设置吗？" class="headerlink" title="23、行内元素和块级元素的区别是什么？行内元素的 padding 和 margin 可设置吗？"></a>23、行内元素和块级元素的区别是什么？行内元素的 padding 和 margin 可设置吗？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">块级元素(block)特性：总是独占一行，表现为另起一行开始，而且其后的元素也必须另起一行显示;宽度(width)、高度(height)、内边距(padding)和外边距(margin)都可控制;</span><br><span class="line">内联元素(inline)特性：和相邻的内联元素在同一行;宽度(width)、高度(height)、内边距的 top/bottom(padding-top/padding-bottom)和外边</span><br><span class="line">距的 top/bottom(margin-top/margin-bottom)都不可改变（也就是 padding 和 margin 的left 和 right 是可以设置的），就是里面文字或图片的大小。</span><br><span class="line">那么问题来了，浏览器还有默认的天生 inline-block 元素（拥有内在尺寸，可设置高宽，但不会自动换行）：&lt;input&gt; 、&lt;img&gt; 、&lt;button&gt; 、&lt;texterea&gt; 、&lt;label&gt;。</span><br></pre></td></tr></table></figure>
+<h3 id="24、什么是外边距重叠？重叠的结果是什么？"><a href="#24、什么是外边距重叠？重叠的结果是什么？" class="headerlink" title="24、什么是外边距重叠？重叠的结果是什么？"></a>24、什么是外边距重叠？重叠的结果是什么？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">外边距重叠就是 margin-collapse。</span><br><span class="line">在 CSS 当中，相邻的两个盒子（可能是兄弟关系也可能是祖先关系）的外边距可以结合成一个单独的外边距。这种合并外边距的方式被称为折叠，并且因而所结合成的外边距称为折叠外边距。</span><br><span class="line">折叠结果遵循下列计算规则：</span><br><span class="line">两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值。</span><br><span class="line">两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。</span><br><span class="line">两个外边距一正一负时，折叠结果是两者的相加的和。</span><br></pre></td></tr></table></figure>
+<h3 id="26、rgba-和-opacity-的透明效果有什么不同？"><a href="#26、rgba-和-opacity-的透明效果有什么不同？" class="headerlink" title="26、rgba()和 opacity 的透明效果有什么不同？"></a>26、rgba()和 opacity 的透明效果有什么不同？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rgba()和 opacity 都能实现透明效果，但最大的不同是 opacity 作用于元素，以及元素内的所有内容的透明度，</span><br><span class="line">而 rgba()只作用于元素的颜色或其背景色。（设置 rgba 透明的元素的子元素不会继承透明效果！）</span><br></pre></td></tr></table></figure>
+<h3 id="27、让文字在垂直和水平方向上重叠的两个属性是什么？"><a href="#27、让文字在垂直和水平方向上重叠的两个属性是什么？" class="headerlink" title="27、让文字在垂直和水平方向上重叠的两个属性是什么？"></a>27、让文字在垂直和水平方向上重叠的两个属性是什么？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">垂直方向：line-height</span><br><span class="line">水平方向：letter-spacing</span><br><span class="line">关于 letter-spacing 的妙用可以用于消除 inline-block 元素间的换行符空格间隙问题。</span><br></pre></td></tr></table></figure>
+<h3 id="28、如何垂直居中一个浮动元素？"><a href="#28、如何垂直居中一个浮动元素？" class="headerlink" title="28、如何垂直居中一个浮动元素？"></a>28、如何垂直居中一个浮动元素？</h3><p>方法一：已知元素的高宽<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.div1&#123;</span><br><span class="line">background-color:#6699FF;</span><br><span class="line">width:200px;</span><br><span class="line">height:200px;</span><br><span class="line">position: absolute; //父元素需要相对定位</span><br><span class="line">top: 50%;</span><br><span class="line">left: 50%;</span><br><span class="line">margin-top:-100px ; //二分之一的 height，width</span><br><span class="line">margin-left: -100px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>方法二:未知元素的高宽<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.div1&#123;</span><br><span class="line">width: 200px;</span><br><span class="line">height: 200px;</span><br><span class="line">background-color: #6699FF;</span><br><span class="line">margin:auto;</span><br><span class="line">position: absolute; //父元素需要相对定位</span><br><span class="line">left: 0;</span><br><span class="line">top: 0;</span><br><span class="line">right: 0;</span><br><span class="line">bottom: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如何垂直居中一个img?（用更简便的方法。）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.container //img的容器设置如下</span><br><span class="line">&#123;</span><br><span class="line">display:table-cell;</span><br><span class="line">text-align:center;</span><br><span class="line">vertical-align:middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="29、px-和-em-的区别"><a href="#29、px-和-em-的区别" class="headerlink" title="29、px 和 em 的区别"></a>29、px 和 em 的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">px 和 em 都是长度单位，区别是，px 的值是固定的，指定是多少就是多少，计算比较容易。</span><br><span class="line">em 得值不是固定的，并且 em 会继承父级元素的字体大小。</span><br><span class="line">浏览器的默认字体高都是16px。所以未经调整的浏览器都符合: 1em=16px。那么12px=0.75em,10px=0.625em。</span><br></pre></td></tr></table></figure>
+<h3 id="30、”reset”的-CSS-文件如何使用？和-normalize-css-的不同之处？"><a href="#30、”reset”的-CSS-文件如何使用？和-normalize-css-的不同之处？" class="headerlink" title="30、”reset”的 CSS 文件如何使用？和 normalize.css 的不同之处？"></a>30、”reset”的 CSS 文件如何使用？和 normalize.css 的不同之处？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">重置样式非常多，凡是一个前端开发人员肯定有一个常用的重置 CSS 文件并知道如何使用它们。原因是不同的浏览器对一些元素有不同的</span><br><span class="line">默认样式，如果你不处理，在不同的浏览器下会存在必要的风险，或者更有戏剧性的性发生。</span><br><span class="line">你可能会用 Normalize 来代替你的重置样式文件。它没有重置所有的样式风格，但仅提供了一套合理的默认样式值。既能让众多浏览器达到一致和合理，但又不扰乱其他的东西（如粗</span><br><span class="line">体的标题）。</span><br><span class="line">在这一方面，无法做每一个复位重置。它也确实有些超过一个重置，它处理了你永远都不用考虑的怪癖，像 HTML 的 audio 元素不一致或 line-height 不一致。</span><br></pre></td></tr></table></figure>
+<h3 id="31、Sass、LESS-是什么？为什么要使用他们？"><a href="#31、Sass、LESS-是什么？为什么要使用他们？" class="headerlink" title="31、Sass、LESS 是什么？为什么要使用他们？"></a>31、Sass、LESS 是什么？为什么要使用他们？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">他们是 CSS 预处理器。他是 CSS 上的一种抽象层。他们是一种特殊的语法/语言编译成 CSS。</span><br><span class="line">例如 Less 是一种动态样式语言. 将 CSS 结构清晰，便于扩展。</span><br><span class="line">可以方便地屏蔽浏览器私有语法差异。这个不用多说，封装对浏览器语法差异的重复处理，减少无意义的机械劳动。</span><br><span class="line">可以轻松实现多重继承。</span><br><span class="line">完全兼容 CSS 代码，可以方便地应用到老项目中。LESS 只是在 CSS 语法上做了扩展，所以老的 CSS 代码也可以与 LESS 代码一同编译。</span><br></pre></td></tr></table></figure>
+<h3 id="32、display-none-与-visibility-hidden-的区别是什么？"><a href="#32、display-none-与-visibility-hidden-的区别是什么？" class="headerlink" title="32、display:none 与 visibility:hidden 的区别是什么？"></a>32、display:none 与 visibility:hidden 的区别是什么？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">display : 隐藏对应的元素但不挤占该元素原来的空间。</span><br><span class="line">visibility: 隐藏对应的元素并且挤占该元素原来的空间。</span><br></pre></td></tr></table></figure>
+<h3 id="33、CSS-中-link-和-import-的区别是："><a href="#33、CSS-中-link-和-import-的区别是：" class="headerlink" title="33、CSS 中 link 和@import 的区别是："></a>33、CSS 中 link 和@import 的区别是：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Link 属于 html 标签，而@import 是 CSS 中提供的在页面加载的时候，link 会同时被加载，而@import 引用的 CSS 会在页面加载完成后才会加</span><br><span class="line">载引用的 CSS</span><br><span class="line">@import 只有在 ie5 以上才可以被识别，而 link 是 html 标签，不存在浏览器兼容性问题</span><br><span class="line">Link 引入样式的权重大于@import 的引用（@import 是将引用的样式导入到当前的页面中）</span><br></pre></td></tr></table></figure>
+<h3 id="34、BFC-是什么"><a href="#34、BFC-是什么" class="headerlink" title="34、BFC 是什么?"></a>34、BFC 是什么?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">BFC（块级格式化上下文），一个创建了新的 BFC 的盒子是独立布局的，盒子内元素的布局不会影响盒子外面的元素。在同一个 BFC 中的两个相邻的盒子在垂直方向发生 margin 重叠的问题</span><br><span class="line">BFC 是指浏览器中创建了一个独立的渲染区域，该区域内所有元素的布局不会影响到区域外元素的布局，这个渲染区域只对块级元素起作用</span><br></pre></td></tr></table></figure>
+<h3 id="35、HTML-与-XHTML——二者有什么区别？"><a href="#35、HTML-与-XHTML——二者有什么区别？" class="headerlink" title="35、HTML 与 XHTML——二者有什么区别？"></a>35、HTML 与 XHTML——二者有什么区别？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 所有的标记都必须要有一个相应的结束标记</span><br><span class="line">2. 所有标签的元素和属性的名字都必须使用小写</span><br><span class="line">3. 所有的 XML 标记都必须合理嵌套</span><br><span class="line">4. 所有的属性必须用引号 &quot;&quot; 括起来</span><br><span class="line">5. 把所有 &lt; 和 &amp; 特殊符号用编码表示</span><br><span class="line">6. 给所有属性赋一个值</span><br><span class="line">7. 不要在注释内容中使用 &quot;--&quot;</span><br><span class="line">8. 图片必须有说明文字</span><br></pre></td></tr></table></figure>
+<h3 id="36、html-常见兼容性问题？"><a href="#36、html-常见兼容性问题？" class="headerlink" title="36、html 常见兼容性问题？"></a>36、html 常见兼容性问题？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">双边距 BUG float 引起的 加入_display：inline</span><br><span class="line">3像素问题 使用 float 引起的 使用 dislpay:inline -3px</span><br><span class="line">超链接 hover 点击后失效 使用正确的书写顺序 link visited hover active</span><br><span class="line">Ie z-index 问题 给父级添加 position:relative</span><br><span class="line">Png 透明 使用 js 代码 改</span><br><span class="line">Min-height 最小高度 ！Important 解决’</span><br><span class="line">select 在 ie6 下遮盖 使用 iframe 嵌套</span><br><span class="line">没有办法定义1px左右的宽度容器（IE6默认的行高造成的，使用over:hidden,zoom:0.08 line-height:1px）</span><br><span class="line">IE5-8 不支持 opacity，解决办法：</span><br><span class="line">.opacity &#123;</span><br><span class="line">opacity: 0.4</span><br><span class="line">filter: alpha(opacity=60); /* for IE5-7 */</span><br><span class="line">-ms-filter: &quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=60)&quot;; /* for IE8*/</span><br><span class="line">&#125;</span><br><span class="line">IE6 不支持 PNG 透明背景，解决办法: IE6 下使用 gif 图片,或是做成 PNG8.</span><br></pre></td></tr></table></figure>
+<h3 id="37、对-WEB-标准以及-W3C-的理解与认识"><a href="#37、对-WEB-标准以及-W3C-的理解与认识" class="headerlink" title="37、对 WEB 标准以及 W3C 的理解与认识"></a>37、对 WEB 标准以及 W3C 的理解与认识</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">答：标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外 链 css 和 js 脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维 护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性。</span><br></pre></td></tr></table></figure>
+<h3 id="38、行内元素、块级元素、空-void-元素有哪些-CSS-的盒模型"><a href="#38、行内元素、块级元素、空-void-元素有哪些-CSS-的盒模型" class="headerlink" title="38、行内元素、块级元素、空(void)元素有哪些?CSS 的盒模型?"></a>38、行内元素、块级元素、空(void)元素有哪些?CSS 的盒模型?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">块级元素：div p h1 h2 h3 h4 form ul</span><br><span class="line">行内元素: a b br i span input select</span><br><span class="line">Css盒模型:内容，border ,margin，padding</span><br><span class="line">知名的空元素：&lt;br&gt;&lt;hr&gt;&lt;img&gt;&lt;input&gt;&lt;link&gt;&lt;meta&gt;</span><br><span class="line">鲜为人知的是： &lt;area&gt;&lt;base&gt;&lt;col&gt;&lt;command&gt;&lt;embed&gt;&lt;keygen&gt;&lt;param&gt;&lt;source&gt;&lt;track&gt;&lt;wbr&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="39、前端页面有哪三层构成，分别是什么-作用是什么"><a href="#39、前端页面有哪三层构成，分别是什么-作用是什么" class="headerlink" title="39、前端页面有哪三层构成，分别是什么?作用是什么?"></a>39、前端页面有哪三层构成，分别是什么?作用是什么?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">结构层 Html 表示层 CSS 行为层 js。</span><br></pre></td></tr></table></figure>
+<h3 id="40、Doctype-作用-严格模式与混杂模式区分它们有何意义"><a href="#40、Doctype-作用-严格模式与混杂模式区分它们有何意义" class="headerlink" title="40、Doctype 作用? 严格模式与混杂模式区分它们有何意义?"></a>40、Doctype 作用? 严格模式与混杂模式区分它们有何意义?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE&gt; 声明位于文档中的最前面，处于 &lt;html&gt; 标签之前。告知浏览器的解析器，用什么文档类型 规范来解析这个文档。</span><br><span class="line">严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。</span><br><span class="line">在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。</span><br><span class="line">DOCTYPE 不存在或格式不正确会导致文档以混杂模式呈现。</span><br></pre></td></tr></table></figure>
+<h3 id="41、b-标签和-strong-标签-i-标签和-em-标签的区别？"><a href="#41、b-标签和-strong-标签-i-标签和-em-标签的区别？" class="headerlink" title="41、b 标签和 strong 标签,i 标签和 em 标签的区别？"></a>41、b 标签和 strong 标签,i 标签和 em 标签的区别？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">后者有语义，前者则无。</span><br></pre></td></tr></table></figure>
+<h3 id="42、CSS-选择符有哪些？哪些属性可以继承？优先级算法如何计算？"><a href="#42、CSS-选择符有哪些？哪些属性可以继承？优先级算法如何计算？" class="headerlink" title="42、CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？"></a>42、CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">* 1.id 选择器（ # myid）</span><br><span class="line">2.类选择器（.myclassname）</span><br><span class="line">3.标签选择器（div, h1, p）</span><br><span class="line">4.相邻选择器（h1 + p）</span><br><span class="line">5.子选择器（ul &lt; li）</span><br><span class="line">6.后代选择器（li a）</span><br><span class="line">7.通配符选择器（ * ）</span><br><span class="line">8.属性选择器（a[rel = &quot;external&quot;]）</span><br><span class="line">9.伪类选择器（a: hover, li: nth - child）</span><br><span class="line">* 可继承： font-size font-family color, UL LI DL DD DT;</span><br><span class="line">* 不可继承 ：border padding margin width height ;</span><br><span class="line">* 优先级就近原则，样式定义最近者为准;</span><br><span class="line">* 载入样式以最后载入的定位为准;</span><br><span class="line">优先级为:!important &gt; id &gt; class &gt; tag</span><br><span class="line">important 比 内联优先级高</span><br></pre></td></tr></table></figure>
+<h2 id="HTML5和CSS3"><a href="#HTML5和CSS3" class="headerlink" title="HTML5和CSS3"></a>HTML5和CSS3</h2><h3 id="1、CSS3-有哪些新特性？"><a href="#1、CSS3-有哪些新特性？" class="headerlink" title="1、CSS3 有哪些新特性？"></a>1、CSS3 有哪些新特性？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CSS3 实现圆角（border-radius），阴影（box-shadow），</span><br><span class="line">对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）</span><br><span class="line">transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px)skew(-9deg,0deg);// 旋转,缩放,定位,倾斜</span><br><span class="line">增加了更多的 CSS 选择器 多背景 rgba</span><br><span class="line">在 CSS3 中唯一引入的伪元素是 ::selection.</span><br><span class="line">媒体查询, 多栏布局, border-image</span><br></pre></td></tr></table></figure>
+<h3 id="2、html5-有哪些新特性、移除了那些元素？如何区分-HTML-和-HTML5？"><a href="#2、html5-有哪些新特性、移除了那些元素？如何区分-HTML-和-HTML5？" class="headerlink" title="2、html5 有哪些新特性、移除了那些元素？如何区分 HTML 和 HTML5？"></a>2、html5 有哪些新特性、移除了那些元素？如何区分 HTML 和 HTML5？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">新特性：HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，地理定位等功能的增加</span><br><span class="line">拖拽释放(Drag and drop) API</span><br><span class="line">语义化更好的内容标签（header,nav,footer,aside,article,section）</span><br><span class="line">音频、视频 API(audio,video)</span><br><span class="line">画布(Canvas) API</span><br><span class="line">地理(Geolocation) API</span><br><span class="line">本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；</span><br><span class="line">sessionStorage 的数据在浏览器关闭后自动删除</span><br><span class="line">表单控件，calendar、date、time、email、url、search</span><br><span class="line">新的技术 webworker, websocket, Geolocation</span><br><span class="line">移除的元素：</span><br><span class="line">纯表现的元素：basefont，big，center，font, s，strike，tt，u；</span><br><span class="line">对可用性产生负面影响的元素：frame，frameset，noframes；</span><br><span class="line">支持 HTML5 新标签：</span><br><span class="line">1. IE8/IE7/IE6 支持通过 document.createElement 方法产生的标签，可以利用这一特性让这些浏览器支持 HTML5 新标签，浏览器支持新标签后，还需要添加标签默认的样式（当然最好的方式是直接使用成熟的框架、使用最多的是 html5shim 框架）：</span><br><span class="line">&lt;!--[if lt IE 9]&gt;</span><br><span class="line">&lt;script&gt; src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&lt;/script&gt;</span><br><span class="line">&lt;![endif]--&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DOCTYPE 声明新增的结构元素、功能元素本地存储（Local Storage ）和 cookies（储存在用户本地终端上的数据）</span><br><span class="line">Cookies:服务器和客户端都可以访问；大小只有 4KB 左右；有有效期，过期后将会删除；</span><br><span class="line">本地存储：只有本地浏览器端可访问数据，服务器不能访问本地存储直到故意通过 POST 或者 GET 的通道发送到服务器；每个域 5MB；没有过期数据，它将保留知道用户从浏览器清除或者使用 Javascript 代码移除</span><br></pre></td></tr></table></figure>
+<h3 id="4、如何实现浏览器内多个标签页之间的通信"><a href="#4、如何实现浏览器内多个标签页之间的通信" class="headerlink" title="4、如何实现浏览器内多个标签页之间的通信?"></a>4、如何实现浏览器内多个标签页之间的通信?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">调用 localstorge、cookies 等本地存储方式</span><br></pre></td></tr></table></figure>
+<h3 id="5、你如何对网站的文件和资源进行优化？"><a href="#5、你如何对网站的文件和资源进行优化？" class="headerlink" title="5、你如何对网站的文件和资源进行优化？"></a>5、你如何对网站的文件和资源进行优化？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">文件合并</span><br><span class="line">文件最小化/文件压缩</span><br><span class="line">使用 CDN 托管</span><br><span class="line">缓存的使用</span><br></pre></td></tr></table></figure>
+<h3 id="6、什么是响应式设计？"><a href="#6、什么是响应式设计？" class="headerlink" title="6、什么是响应式设计？"></a>6、什么是响应式设计？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">它是关于网页制作的过程中让不同的设备有不同的尺寸和不同的功能。响应式设计是让所有的人能在这些设备上让网站运行正常</span><br></pre></td></tr></table></figure>
+<h3 id="7、新的-HTML5-文档类型和字符集是？"><a href="#7、新的-HTML5-文档类型和字符集是？" class="headerlink" title="7、新的 HTML5 文档类型和字符集是？"></a>7、新的 HTML5 文档类型和字符集是？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">HTML5 文档类型：&lt;!doctype html&gt;</span><br><span class="line">HTML5 使用的编码&lt;meta charset=”UTF-8”&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="8、HTML5-Canvas-元素有什么用？"><a href="#8、HTML5-Canvas-元素有什么用？" class="headerlink" title="8、HTML5 Canvas 元素有什么用？"></a>8、HTML5 Canvas 元素有什么用？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Canvas 元素用于在网页上绘制图形，该元素标签强大之处在于可以直接在 HTML 上进行图形操作。</span><br></pre></td></tr></table></figure>
+<h3 id="9、HTML5-存储类型有什么区别？"><a href="#9、HTML5-存储类型有什么区别？" class="headerlink" title="9、HTML5 存储类型有什么区别？"></a>9、HTML5 存储类型有什么区别？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Media API、Text Track API、Application Cache API、User Interaction、Data TransferAPI、Command API、Constraint Validation API、History API</span><br></pre></td></tr></table></figure>
+<h3 id="10、CSS3-新增伪类有那些？"><a href="#10、CSS3-新增伪类有那些？" class="headerlink" title="10、CSS3 新增伪类有那些？"></a>10、CSS3 新增伪类有那些？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">p:first-of-type 选择属于其父元素的首个 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</span><br><span class="line">p:last-of-type 选择属于其父元素的最后 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</span><br><span class="line">p:only-of-type 选择属于其父元素唯一的 &lt;p&gt; 元素的每个 &lt;p&gt; 元素。</span><br><span class="line">p:only-child 选择属于其父元素的唯一子元素的每个 &lt;p&gt; 元素。</span><br><span class="line">p:nth-child(2) 选择属于其父元素的第二个子元素的每个 &lt;p&gt; 元素。</span><br><span class="line">:enabled、:disabled 控制表单控件的禁用状态。</span><br><span class="line">:checked，单选框或复选框被选中。</span><br></pre></td></tr></table></figure>
+<h3 id="11、前端应该如何高质量完成工作"><a href="#11、前端应该如何高质量完成工作" class="headerlink" title="11、前端应该如何高质量完成工作?"></a>11、前端应该如何高质量完成工作?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">首先划分成头部、body、脚部；</span><br><span class="line">实现效果图是最基本的工作，精确到 2px；</span><br><span class="line">与设计师，产品经理的沟通和项目的参与</span><br><span class="line">做好的页面结构，页面重构和用户体验</span><br><span class="line">处理 hack，兼容、写出优美的代码格式</span><br><span class="line">针对服务器的优化、拥抱 HTML5。</span><br></pre></td></tr></table></figure>
+<h3 id="12、css中content属性的作用"><a href="#12、css中content属性的作用" class="headerlink" title="12、css中content属性的作用"></a>12、css中content属性的作用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">css 的 content 属性专门应用在 before/after 伪元素上，用来插入生成内容。最常见的应用是利用伪类清除浮动。</span><br><span class="line">//一种常见利用伪类清除浮动的代码</span><br><span class="line">.clearfix:after &#123;</span><br><span class="line">content:&quot;.&quot;; //这里利用到了 content 属性</span><br><span class="line">display:block;</span><br><span class="line">height:0;</span><br><span class="line">visibility:hidden;</span><br><span class="line">clear:both; &#125;</span><br><span class="line">.clearfix &#123;</span><br><span class="line">*zoom:1;</span><br><span class="line">&#125;</span><br><span class="line">after 伪元素通过 content 在元素的后面生成了内容为一个点的块级素，再利用clear:both 清除浮动。</span><br><span class="line">那么问题继续还有，知道 css 计数器（序列数字字符自动递增）吗？如何通过css content 属性实现 css 计数器？</span><br><span class="line">css 计数器是通过设置 counter-reset 、counter-increment 两个属性 、及counter()/counters()一个方法配合 after / before 伪类实现。</span><br></pre></td></tr></table></figure>
+<h3 id="13、在HTML5页面中嵌入音频"><a href="#13、在HTML5页面中嵌入音频" class="headerlink" title="13、在HTML5页面中嵌入音频"></a>13、在HTML5页面中嵌入音频</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HTML 5 包含嵌入音频文件的标准方式，支持的格式包括 MP3、Wav 和 Ogg：</span><br><span class="line">&lt;audio controls&gt;</span><br><span class="line">&lt;source src=&quot;jamshed.mp3&quot; type=&quot;audio/mpeg&quot;&gt;</span><br><span class="line">Your browser does&apos;nt support audio embedding feature.</span><br><span class="line">&lt;/audio&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="14、在HTML5页面中嵌入视频"><a href="#14、在HTML5页面中嵌入视频" class="headerlink" title="14、在HTML5页面中嵌入视频"></a>14、在HTML5页面中嵌入视频</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">和音频一样，HTML5 定义了嵌入视频的标准方法，支持的格式包括：MP4、WebM 和 Ogg：</span><br><span class="line">&lt;video width=&quot;450&quot; height=&quot;340&quot; controls&gt;</span><br><span class="line">&lt;source src=&quot;jamshed.mp4&quot; type=&quot;video/mp4&quot;&gt;</span><br><span class="line">Your browser does&apos;nt support video embedding feature.</span><br><span class="line">&lt;/video&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="15、写一个css3幻灯片效果页面"><a href="#15、写一个css3幻灯片效果页面" class="headerlink" title="15、写一个css3幻灯片效果页面"></a>15、写一个css3幻灯片效果页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">.ani&#123;</span><br><span class="line">width:480px;</span><br><span class="line">height:320px;</span><br><span class="line">margin:50px auto;</span><br><span class="line">overflow: hidden;</span><br><span class="line">box-shadow:0 0 5px rgba(0,0,0,1);</span><br><span class="line">background-size: cover;</span><br><span class="line">background-position: center;</span><br><span class="line">-webkit-animation-name: &quot;loops&quot;;</span><br><span class="line">-webkit-animation-duration: 20s;</span><br><span class="line">-webkit-animation-iteration-count: infinite;</span><br><span class="line">&#125;</span><br><span class="line">@-webkit-keyframes &quot;loops&quot; &#123;</span><br><span class="line">0%</span><br><span class="line">&#123; background:url(&apos;&apos;) no-repeat;</span><br><span class="line">&#125;</span><br><span class="line">50% &#123;</span><br><span class="line">background:url(&apos;&apos;) no-repeat;</span><br><span class="line">&#125;</span><br><span class="line">100% &#123;</span><br><span class="line">background:url(&apos;&apos;) no-repeat;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+            <div class="article-tags tags">
+                
+                    <a href="/tags/前端/"><i class="fa fa-tag"></i>&nbsp;&nbsp;前端</a>
+                
+                    <a href="/tags/面试题/"><i class="fa fa-tag"></i>&nbsp;&nbsp;面试题</a>
+                
+                    <a href="/tags/Div-css/"><i class="fa fa-tag"></i>&nbsp;&nbsp;Div+css</a>
+                
+                    <a href="/tags/Html5-css3/"><i class="fa fa-tag"></i>&nbsp;&nbsp;Html5+css3</a>
+                
+            </div>
+        
+        
+            <div class="art-item-footer">
+                
+                    <span class="art-item-left">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp;
+                        <a href="/2016/08/15/s-xiaocao/" rel="prev" title="小草无根">
+                            小草无根
+                        </a>
+                    </span>
+                
+                
+            </div>
+        
+    </section>
+</article>
+
+<style>
+    .reward{text-align: center; font-size: 15px; margin: 20px 0 !important;}
+    .reward .notes{ color:#ff9800;}
+    .reward .btn{margin-top: 20px;}
+    .reward .btn a{background: #5CC281;color: #ffffff; padding: 8px 30px; border-radius: 6px;}
+    .reward .btn a:hover{background: #358451;}
+    .reward .code{display: none;}
+    .reward:hover .code{margin-top: 20px;display: flex;}
+    .reward:hover .code dl{flex: 1;}
+    .reward:hover .code dl dt{}
+    .reward:hover .code dl dt img.pic{width:160px;height: 160px;}
+    .reward:hover .code dl dd{letter-spacing: 2px;}
+</style>
+<article class="post white-box reward">
+    <div class="notes">打赏我的人，运气都不会太差！</div>
+    <div class="btn"><a>打 赏</a></div>
+    <div class="code">
+        <dl>
+            <dt><img class="pic" src='http://pdliii7ak.bkt.clouddn.com/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg' /></dt>
+            <dd>支付宝打赏</dd>
+        </dl>
+        <dl>
+            <dt><img class="pic" src='http://pdliii7ak.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1.jpg' /></dt>
+            <dd>微信打赏</dd>
+        </dl>
+    </div>
+</article>
+
+<!-- 显示推荐文章 -->
+
+<article class="post white-box article-type-post>">
+    <section class="article typo">
+        
+        
+
+    <div class="recommended_posts">
+        <h4><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;你可能感兴趣的文章</h4> 
+        <ul>
+            
+                <li><a href="https://daijc.github.io/2017/11/17/q-jsal/">JS练习题</a></li>
+            
+                <li><a href="https://daijc.github.io/2017/07/17/q-webstormK/">webstorm常用快捷键</a></li>
+            
+                <li><a href="https://daijc.github.io/2017/07/15/s-huakai/">花开无心</a></li>
+            
+                <li><a href="https://daijc.github.io/2016/08/15/s-xiaocao/">小草无根</a></li>
+            
+        </ul>
+    </div>
+
+
+        
+    </section>
+</article>
+
+<br>
+
+<!-- 显示评论 -->
+
+<article class="post white-box article-type-post>">
+    <section class="article typo">
+        
+            
+                <h4><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;&nbsp;评论</h4>
+            
+            
+            
+            
+                
+                    <section id="comments">
+                        <div id="valine_container" class="valine_thread">
+                            </i><i class="fa fa-spinner fa-spin fa-fw"></i>
+                        </div>
+                    </section>
+                
+            
+        
+    </section>
+</article>
+
+
+<script>
+    window.subData = {
+        title: 'CSS常见面试题',
+        tools: true
+    }
+</script>
+
+
+      </div>
+      <aside class='l_side'>
+        
+	
+
+	
+
+	
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+    <div class="social-wrapper">
+        
+    </div>
+    <br>
+
+    <div>博客内容遵循知识共享协议</div>
+
+    <div>本站使用 Material-X 主题，
+		总访问量为 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+    </div>
+
+</footer>
+
+  <script>setLoadingBarProgress(80);</script>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<!-- 访问统计 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 推荐文章 -->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+var ALGOLIA_API_KEY = "";
+var ALGOLIA_APP_ID = "";
+var ALGOLIA_INDEX_NAME = "";
+var AZURE_SERVICE_NAME = "";
+var AZURE_INDEX_NAME = "";
+var AZURE_QUERY_KEY = "";
+var BAIDU_API_ID = "";
+var SEARCH_SERVICE = "hexo";
+var ROOT = "/"||"/";
+if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+    
+    
+    
+        
+            <script>
+            var GUEST_INFO = ['nick','mail','link'];
+            var guest_info = 'nick,mail'.split(',').filter(function(item){
+                return GUEST_INFO.indexOf(item) > -1
+            });
+            var notify = 'false' == true;
+            var verify = 'false' == true;
+            var valine = new Valine();
+            valine.init({
+                el: '#valine_container',
+                notify: notify,
+                verify: verify,
+                guest_info: guest_info,
+                appId: "bEFytQ4Rpyo4jzlqfudykpsp-gzGzoHsz",
+                appKey: "9TNjGhdqST9S4QB3yieeAeEC",
+                placeholder: "快来评论吧~",
+                pageSize:'10',
+                avatar:'mp',
+                lang:'zh-cn'
+            })
+            </script>
+        
+    
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

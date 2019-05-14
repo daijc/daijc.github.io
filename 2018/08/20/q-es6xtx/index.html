@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>ES6 新增特性练习题 | Xiao Xiao</title>
+  <meta name="description" content="记录生活点滴，留存过往记忆" />
+  <meta name="keywords" content="前端面试题,小草无根,花开无心,落叶无根" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="Xiao Xiao">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1、判断两个 Set 是否相同1234567完成 isSameSet 函数，它接受了两个 Set 对象作为参数，请你返回 true/false 来表明这两个 set 的内容是否完全一致，例如：const a = &amp;#123;&amp;#125;const b = 1const c = &amp;apos;ScriptOJ&amp;apos;const set1 = new Set([a, b, c])const set2">
+<meta name="keywords" content="前端,Javascript,面试题,ES6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6 新增特性练习题">
+<meta property="og:url" content="https://daijc.github.io/2018/08/20/q-es6xtx/index.html">
+<meta property="og:site_name" content="Xiao Xiao">
+<meta property="og:description" content="1、判断两个 Set 是否相同1234567完成 isSameSet 函数，它接受了两个 Set 对象作为参数，请你返回 true/false 来表明这两个 set 的内容是否完全一致，例如：const a = &amp;#123;&amp;#125;const b = 1const c = &amp;apos;ScriptOJ&amp;apos;const set1 = new Set([a, b, c])const set2">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-08-21T02:32:01.142Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6 新增特性练习题">
+<meta name="twitter:description" content="1、判断两个 Set 是否相同1234567完成 isSameSet 函数，它接受了两个 Set 对象作为参数，请你返回 true/false 来表明这两个 set 的内容是否完全一致，例如：const a = &amp;#123;&amp;#125;const b = 1const c = &amp;apos;ScriptOJ&amp;apos;const set1 = new Set([a, b, c])const set2">
+
+  <link rel="shortcut icon" href="" />
+  <link rel="icon" href="" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script>
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				<!-- <i class="fa fa-home"></i> -->
+				Xiao Xiao
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								<i class="fa fa-home"></i>
+								主页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-projects' href='/categories/前端'>
+								<i class="fa fa-cube"></i>
+								前端
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-blogs' href='/categories/随笔'>
+								<i class="fa fa-heart"></i>
+								随笔
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								<i class="fa fa-archive"></i>
+								归档
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon"><i class="fa fa-search"></i></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><i class="fa fa-search flat-box"></i></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><i class="fa fa-navicon flat-box"></i></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'></a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><i class="fa fa-comments flat-box"></i></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><i class="fa fa-arrow-up flat-box"></i></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><i class="fa fa-list-ul flat-box"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				<i class="fa fa-home"></i>
+				主页
+			</a>
+		
+			<a href="/categories/前端" class="nav-projects nav">
+				<i class="fa fa-cube"></i>
+				前端
+			</a>
+		
+			<a href="/categories/随笔" class="nav-blogs nav">
+				<i class="fa fa-heart"></i>
+				随笔
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				<i class="fa fa-archive"></i>
+				归档
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-q-es6xtx" class="post white-box article-type-post" itemscope itemprop="blogPost">
+    <section class='meta'>
+        <h2 class="title">
+            <a href="/2018/08/20/q-es6xtx/">
+                
+                    ES6 新增特性练习题
+                
+            </a>
+        </h2>
+        <time>
+            2018-08-20 星期一&nbsp;&nbsp;
+            <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/前端/">前端</a>
+    </div>
+
+
+    </section>
+    
+        <section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、判断两个-Set-是否相同"><span class="toc-text">1、判断两个 Set 是否相同</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、数组去重"><span class="toc-text">2、数组去重</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、判断美元符号格式"><span class="toc-text">3、判断美元符号格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、filter-map"><span class="toc-text">4、filter map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、数组的空位填充"><span class="toc-text">5、数组的空位填充</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、不重复数字"><span class="toc-text">6、不重复数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、监听数组变化"><span class="toc-text">7、监听数组变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8、不用循环生成数组"><span class="toc-text">8、不用循环生成数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9、后端数据处理"><span class="toc-text">9、后端数据处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10、数组拍平"><span class="toc-text">10、数组拍平</span></a></li></ol></section>
+    
+    <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+            <h3 id="1、判断两个-Set-是否相同"><a href="#1、判断两个-Set-是否相同" class="headerlink" title="1、判断两个 Set 是否相同"></a>1、判断两个 Set 是否相同</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">完成 isSameSet 函数，它接受了两个 Set 对象作为参数，请你返回 true/false 来表明这两个 set 的内容是否完全一致，例如：</span><br><span class="line">const a = &#123;&#125;</span><br><span class="line">const b = 1</span><br><span class="line">const c = &apos;ScriptOJ&apos;</span><br><span class="line">const set1 = new Set([a, b, c])</span><br><span class="line">const set2 = new Set([a, c, b])</span><br><span class="line">isSameSet(set1, set2) // =&gt; true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const isSameSet = (set1, set2) =&gt; [...set1].every((o) =&gt; set2.has(o)) &amp;&amp; [...set2].every((o) =&gt; set1.has(o))</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="2、数组去重"><a href="#2、数组去重" class="headerlink" title="2、数组去重"></a>2、数组去重</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">编写一个函数 unique(arr)，返回一个去除数组内重复的元素的数组。例如：</span><br><span class="line">unique([0, 1, 2, 2, 3, 3, 4]) // =&gt; [0, 1, 2, 3, 4]</span><br><span class="line">unique([0, 1, &apos;1&apos;, &apos;1&apos;, 2]) // =&gt; [0, 1, &apos;1&apos;, 2]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const unique = (arr) =&gt; [...new Set(arr)]</span><br><span class="line">或</span><br><span class="line">const unique = (arr)  =&gt; Array.from(new Set(arr))</span><br></pre></td></tr></table></figure>
+<h3 id="3、判断美元符号格式"><a href="#3、判断美元符号格式" class="headerlink" title="3、判断美元符号格式"></a>3、判断美元符号格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">完成一个函数 isUSDFormat 返回 true/false 来判断一个字符串是否符合美元格式：</span><br><span class="line">以 $ 开头</span><br><span class="line">如果是小数，保留两位小数；如果不是小数则不显示小数部分</span><br><span class="line">整数部分从小数点上一位开始每隔三位用 , 分割开来</span><br><span class="line">如果整数部分从数字 0 开始，则只会显示一位 0</span><br><span class="line">例如：</span><br><span class="line">isUSDFormat(&apos;$1&apos;) // =&gt; true</span><br><span class="line">isUSDFormat(&apos;$1.0&apos;) // =&gt; false</span><br><span class="line">isUSDFormat(&apos;$100,000.00&apos;) // =&gt; true</span><br><span class="line">isUSDFormat(&apos;$0,000.00&apos;) // =&gt; false</span><br><span class="line">isUSDFormat(&apos;$0.00&apos;) // =&gt; true</span><br><span class="line">isUSDFormat(&apos;$11,23,345.33&apos;) // =&gt; false</span><br><span class="line">isUSDFormat(&apos;$1,123,345.33&apos;) // =&gt; true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const isUSDFormat = str =&gt; (/^\$([1-9]\d&#123;0,2&#125;(,\d&#123;3&#125;)*|0)(\.\d&#123;2&#125;)?$/).test(str)</span><br></pre></td></tr></table></figure>
+<h3 id="4、filter-map"><a href="#4、filter-map" class="headerlink" title="4、filter map"></a>4、filter map</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const m = new Map([[&apos;Jerry&apos;, 12], [&apos;Jimmy&apos;, 13], [&apos;Tomy&apos;, 14]])</span><br><span class="line">m.filterKeys((key) =&gt; key.startsWith(&apos;J&apos;)) // =&gt; Map &#123; Jerry =&gt; 12, Jimmy =&gt; 13 &#125;</span><br><span class="line">m.filterValues((val) =&gt; val &gt;= 13) // =&gt; Map &#123; Jimmy =&gt; 13, Tomy =&gt; 14  &#125;</span><br><span class="line">原有的 map 保持不变</span><br><span class="line">console.log(m) // =&gt; Map &#123; Jerry =&gt; 12 , Jimmy =&gt; 13, Tomy =&gt; 14 &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Map.prototype.filterKeys = function(fn) &#123;</span><br><span class="line">  return new Map([...this].filter(([k, v]) =&gt; fn(k)));</span><br><span class="line">&#125;</span><br><span class="line">Map.prototype.filterValues = function(fn) &#123;</span><br><span class="line">  return new Map([...this].filter(([k, v]) =&gt; fn(v)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5、数组的空位填充"><a href="#5、数组的空位填充" class="headerlink" title="5、数组的空位填充"></a>5、数组的空位填充</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">JavaScript 数组有空位的概念，也就数组的一个位置上没有任何的值。例如：</span><br><span class="line">[ , , &apos;Hello&apos;] // =&gt; 0, 1 都是空位, 3 不是空位</span><br><span class="line">空位并不等于 undefined 或者 null。一个位置上如果是 undefined 那么它依然有值，例如 [, , undefined]，0 和 1 都是空位，而 2 不是空位。</span><br><span class="line">请你完成一个函数 fillEmpty，它接受一个数组作为参数，可以把数组里面的所有空位都设置为 &apos;Hello&apos;，例如：</span><br><span class="line">const a = [, , null, undefined, &apos;OK&apos;, ,]</span><br><span class="line">fillEmpty(a)</span><br><span class="line">a 变成 [&apos;Hello&apos;, &apos;Hello&apos;, null, undefined, &apos;OK&apos;, &apos;Hello&apos;]</span><br><span class="line">注意，你要原地修改原先的数组，而不是返回一个新的数组。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const fillEmpty = arr =&gt; &#123;</span><br><span class="line">  for(let i=0;i&lt;arr.length;i++) &#123;</span><br><span class="line">    if(!(i in arr)) arr[i] = &apos;Hello&apos;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">或</span><br><span class="line">const fillEmpty = (arr) =&gt; &#123;</span><br><span class="line">  Array.from(arr).map((v,i)=&gt;&#123;if(!(i in arr)) arr[i]=&apos;Hello&apos; &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6、不重复数字"><a href="#6、不重复数字" class="headerlink" title="6、不重复数字"></a>6、不重复数字</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">编写一个 JavaScript 函数 uniqueNums，该函数有一个参数 n（一个不大 31 的整数），其返回值是一个数组，该数组内是 n 个随机且不重复的整数，且整数取值范围是 [2, 32]。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const uniqueNums = (n) =&gt; &#123;</span><br><span class="line">  let set = new Set()</span><br><span class="line">  while(set.size &lt; n) &#123;</span><br><span class="line">    set.add(Math.floor(2 + Math.random()*31))</span><br><span class="line">  &#125;</span><br><span class="line">  return [...set]</span><br><span class="line">&#125;</span><br><span class="line">或</span><br><span class="line">const uniqueNums = (n) =&gt; &#123;</span><br><span class="line">  let arr = [];</span><br><span class="line">  while(arr.length !== n) &#123;</span><br><span class="line">    let randomNum = Math.round(Math.random() * 30 + 2);</span><br><span class="line">    if(arr.indexOf(randomNum) === -1) &#123;</span><br><span class="line">      arr.push(randomNum);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="7、监听数组变化"><a href="#7、监听数组变化" class="headerlink" title="7、监听数组变化"></a>7、监听数组变化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">在前端的 MVVM 框架当中，我们经常需要监听数据的变化，而数组是需要监听的重要对象。请你完成 ObserverableArray，它的实例和普通的数组实例功能相同，但是当调用：</span><br><span class="line">push</span><br><span class="line">pop</span><br><span class="line">shift</span><br><span class="line">unshift</span><br><span class="line">splice</span><br><span class="line">sort</span><br><span class="line">reverse</span><br><span class="line">这些方法的时候，除了执行相同的操作，还会把方法名打印出来。 例如：</span><br><span class="line">const arr = new ObserverableArray()</span><br><span class="line">arr.push(&apos;Good&apos;) // =&gt; 打印 &apos;push&apos;，a 变成了 [&apos;Good&apos;]</span><br><span class="line">注意，你不能修改 Array 的 prototype。还有函数 return 的值和原生的操作保持一致。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function ObserverableArray() &#123;</span><br><span class="line">  return new Proxy([], &#123;</span><br><span class="line">    get(target, propKey) &#123;</span><br><span class="line">      const matArr = [&apos;push&apos;, &apos;pop&apos;, &apos;shift&apos;, &apos;unshift&apos;, &apos;splice&apos;, &apos;sort&apos;, &apos;reverse&apos;];</span><br><span class="line">      matArr.indexOf(propKey) &gt; -1 &amp;&amp; console.log(propKey);</span><br><span class="line">      return target[propKey]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8、不用循环生成数组"><a href="#8、不用循环生成数组" class="headerlink" title="8、不用循环生成数组"></a>8、不用循环生成数组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">完成 arrWithoutLoop 函数，它会被传入一个整数 n 作为参数，返回一个长度为 n 的数组，数组中每个元素的值等于它的下标。arrWithoutLoop 中不能使用循环控制结构。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const arrWithoutLoop = (n) =&gt; [...Array(n)].map((x, i) =&gt; i)</span><br><span class="line">或</span><br><span class="line">const arrWithoutLoop = (n) =&gt; Array.apply(null,&#123;length:n&#125;).map((item,i)=&gt;i)</span><br><span class="line">或</span><br><span class="line">const arrWithoutLoop = n =&gt; [...Array(n).keys()]</span><br><span class="line">或</span><br><span class="line">const arrWithoutLoop = (n, arr = []) =&gt; n ? arr.unshift(n-1) &amp;&amp; arrWithoutLoop(n-1, arr) : arr</span><br></pre></td></tr></table></figure>
+<h3 id="9、后端数据处理"><a href="#9、后端数据处理" class="headerlink" title="9、后端数据处理"></a>9、后端数据处理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">从某数据库接口得到如下值：</span><br><span class="line">&#123;</span><br><span class="line">  rows: [</span><br><span class="line">    [&quot;Lisa&quot;, 16, &quot;Female&quot;, &quot;2000-12-01&quot;],</span><br><span class="line">    [&quot;Bob&quot;, 22, &quot;Male&quot;, &quot;1996-01-21&quot;]</span><br><span class="line">  ],</span><br><span class="line">  metaData: [</span><br><span class="line">    &#123; name: &quot;name&quot;, note: &apos;&apos; &#125;,</span><br><span class="line">    &#123; name: &quot;age&quot;, note: &apos;&apos; &#125;,</span><br><span class="line">    &#123; name: &quot;gender&quot;, note: &apos;&apos; &#125;,</span><br><span class="line">    &#123; name: &quot;birthday&quot;, note: &apos;&apos; &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line">rows 是数据，metaData 是对数据的说明。现写一个函数 parseData，将上面的对象转化为期望的数组：</span><br><span class="line">[</span><br><span class="line">  &#123; name: &quot;Lisa&quot;, age: 16, gender: &quot;Female&quot;, birthday: &quot;2000-12-01&quot; &#125;,</span><br><span class="line">  &#123; name: &quot;Bob&quot;, age: 22, gender: &quot;Male&quot;, birthday: &quot;1996-01-21&quot; &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">const parseData = (data) =&gt; &#123;</span><br><span class="line">  let arr = [];</span><br><span class="line">  data.rows.map((row, index) =&gt; &#123;</span><br><span class="line">  	let obj = &#123;&#125;;</span><br><span class="line">  	row.map((ele, i) =&gt; &#123;</span><br><span class="line">  		obj[data.metaData[i].name] = ele</span><br><span class="line"></span><br><span class="line">  	&#125;);</span><br><span class="line">    arr.push(obj);</span><br><span class="line">  &#125;);</span><br><span class="line">  return arr;</span><br><span class="line">&#125;</span><br><span class="line">或</span><br><span class="line">const parseData = (&#123;rows, metaData&#125;) =&gt; rows.map(row =&gt; row.reduce((p, c, i) =&gt; Object.assign(&#123;&#125;, p, &#123;[metaData[i].name]: c&#125;), &#123;&#125;))</span><br><span class="line">或</span><br><span class="line">const parseData = (&#123; rows, metaData &#125;) =&gt;</span><br><span class="line">    rows.map(v =&gt; &#123;</span><br><span class="line">      const newObj = &#123;&#125;</span><br><span class="line">      for (let i in v) &#123;</span><br><span class="line">        newObj[metaData[i].name] = v[i]</span><br><span class="line">      &#125;</span><br><span class="line">      return newObj</span><br><span class="line"> &#125;)</span><br><span class="line"> 或</span><br><span class="line"> const parseData = (data) =&gt; &#123;</span><br><span class="line">   const metaDataArr = data[&apos;metaData&apos;].map(d =&gt; d.name);</span><br><span class="line">   const rows = data[&apos;rows&apos;];</span><br><span class="line">   return rows.map(row =&gt;&#123;</span><br><span class="line">     return &#123;</span><br><span class="line">         [metaDataArr[0]]:row[0],</span><br><span class="line">         [metaDataArr[1]]:row[1],</span><br><span class="line">         [metaDataArr[2]]:row[2],</span><br><span class="line">         [metaDataArr[3]]:row[3]</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br><span class="line">   )</span><br><span class="line"> &#125;</span><br><span class="line"> 或</span><br><span class="line"> const parseData = (data) =&gt; data.rows.map(x =&gt; &#123;</span><br><span class="line">   return data.metaData.reduce((acc, meta, i) =&gt; (&#123; ...acc, [meta.name]: x[i] &#125;) , &#123;&#125;)</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="10、数组拍平"><a href="#10、数组拍平" class="headerlink" title="10、数组拍平"></a>10、数组拍平</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">编写一个 JavaScript 函数，接受一个仅包含数字的 多维数组 ，返回拍平以后的结果。</span><br><span class="line">例如传入：[1, [[2], 3, 4], 5]，返回 [1, 2, 3, 4, 5]。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">const flatten = (arr) =&gt; &#123;</span><br><span class="line">  let result = []</span><br><span class="line">  arr.forEach((item)=&gt; &#123;</span><br><span class="line">    if (Array.isArray(item)) &#123;</span><br><span class="line">      result = result.concat(flatten(item));</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      result.push(item)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  return result</span><br><span class="line">&#125;</span><br><span class="line">或</span><br><span class="line">const flatten = (arr) =&gt; &#123;</span><br><span class="line">  return arr.reduce((flat, toFlat) =&gt; &#123;</span><br><span class="line">    return flat.concat(Array.isArray(toFlat) ? flatten(toFlat): toFlat);</span><br><span class="line">  &#125;, []);</span><br><span class="line">&#125;</span><br><span class="line">或</span><br><span class="line">const flatten = arr =&gt; arr.length ? arr.toString().split(&apos;,&apos;).map(x =&gt; parseInt(x)) : []</span><br><span class="line">或</span><br><span class="line">const flatten = (arr) =&gt; arr.length !== 0 ? arr.join().split(&apos;,&apos;).map(v =&gt; parseInt(v)) : arr;</span><br></pre></td></tr></table></figure>
+        </div>
+        
+            <div class="article-tags tags">
+                
+                    <a href="/tags/前端/"><i class="fa fa-tag"></i>&nbsp;&nbsp;前端</a>
+                
+                    <a href="/tags/Javascript/"><i class="fa fa-tag"></i>&nbsp;&nbsp;Javascript</a>
+                
+                    <a href="/tags/面试题/"><i class="fa fa-tag"></i>&nbsp;&nbsp;面试题</a>
+                
+                    <a href="/tags/ES6/"><i class="fa fa-tag"></i>&nbsp;&nbsp;ES6</a>
+                
+            </div>
+        
+        
+            <div class="art-item-footer">
+                
+                
+                    <span class="art-item-right">
+                        <a href="/2018/08/20/s-chunni/" rel="next" title="春泥无芬">
+                            春泥无芬
+                        </a>&nbsp;
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </span>
+                
+            </div>
+        
+    </section>
+</article>
+
+<style>
+    .reward{text-align: center; font-size: 15px; margin: 20px 0 !important;}
+    .reward .notes{ color:#ff9800;}
+    .reward .btn{margin-top: 20px;}
+    .reward .btn a{background: #5CC281;color: #ffffff; padding: 8px 30px; border-radius: 6px;}
+    .reward .btn a:hover{background: #358451;}
+    .reward .code{display: none;}
+    .reward:hover .code{margin-top: 20px;display: flex;}
+    .reward:hover .code dl{flex: 1;}
+    .reward:hover .code dl dt{}
+    .reward:hover .code dl dt img.pic{width:160px;height: 160px;}
+    .reward:hover .code dl dd{letter-spacing: 2px;}
+</style>
+<article class="post white-box reward">
+    <div class="notes">打赏我的人，运气都不会太差！</div>
+    <div class="btn"><a>打 赏</a></div>
+    <div class="code">
+        <dl>
+            <dt><img class="pic" src='http://pdliii7ak.bkt.clouddn.com/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg' /></dt>
+            <dd>支付宝打赏</dd>
+        </dl>
+        <dl>
+            <dt><img class="pic" src='http://pdliii7ak.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1.jpg' /></dt>
+            <dd>微信打赏</dd>
+        </dl>
+    </div>
+</article>
+
+<!-- 显示推荐文章 -->
+
+<article class="post white-box article-type-post>">
+    <section class="article typo">
+        
+        
+
+    <div class="recommended_posts">
+        <h4><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;你可能感兴趣的文章</h4> 
+        <ul>
+            
+                <li><a href="https://daijc.github.io/2018/08/20/s-chunni/">春泥无芬</a></li>
+            
+                <li><a href="https://daijc.github.io/2018/08/16/q-jsmst/">JS常见面试题</a></li>
+            
+                <li><a href="https://daijc.github.io/2018/08/15/s-luoye/">落叶无痕</a></li>
+            
+                <li><a href="https://daijc.github.io/2017/11/17/q-jsal/">JS练习题</a></li>
+            
+        </ul>
+    </div>
+
+
+        
+    </section>
+</article>
+
+<br>
+
+<!-- 显示评论 -->
+
+<article class="post white-box article-type-post>">
+    <section class="article typo">
+        
+            
+                <h4><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;&nbsp;评论</h4>
+            
+            
+            
+            
+                
+                    <section id="comments">
+                        <div id="valine_container" class="valine_thread">
+                            </i><i class="fa fa-spinner fa-spin fa-fw"></i>
+                        </div>
+                    </section>
+                
+            
+        
+    </section>
+</article>
+
+
+<script>
+    window.subData = {
+        title: 'ES6 新增特性练习题',
+        tools: true
+    }
+</script>
+
+
+      </div>
+      <aside class='l_side'>
+        
+	
+
+	
+
+	
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+    <div class="social-wrapper">
+        
+    </div>
+    <br>
+
+    <div>博客内容遵循知识共享协议</div>
+
+    <div>本站使用 Material-X 主题，
+		总访问量为 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+    </div>
+
+</footer>
+
+  <script>setLoadingBarProgress(80);</script>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<!-- 访问统计 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 推荐文章 -->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+var ALGOLIA_API_KEY = "";
+var ALGOLIA_APP_ID = "";
+var ALGOLIA_INDEX_NAME = "";
+var AZURE_SERVICE_NAME = "";
+var AZURE_INDEX_NAME = "";
+var AZURE_QUERY_KEY = "";
+var BAIDU_API_ID = "";
+var SEARCH_SERVICE = "hexo";
+var ROOT = "/"||"/";
+if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+    
+    
+    
+        
+            <script>
+            var GUEST_INFO = ['nick','mail','link'];
+            var guest_info = 'nick,mail'.split(',').filter(function(item){
+                return GUEST_INFO.indexOf(item) > -1
+            });
+            var notify = 'false' == true;
+            var verify = 'false' == true;
+            var valine = new Valine();
+            valine.init({
+                el: '#valine_container',
+                notify: notify,
+                verify: verify,
+                guest_info: guest_info,
+                appId: "bEFytQ4Rpyo4jzlqfudykpsp-gzGzoHsz",
+                appKey: "9TNjGhdqST9S4QB3yieeAeEC",
+                placeholder: "快来评论吧~",
+                pageSize:'10',
+                avatar:'mp',
+                lang:'zh-cn'
+            })
+            </script>
+        
+    
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

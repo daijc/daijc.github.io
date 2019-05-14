@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>小草无根 | Xiao Xiao</title>
+  <meta name="description" content="记录生活点滴，留存过往记忆" />
+  <meta name="keywords" content="前端面试题,小草无根,花开无心,落叶无根" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="Xiao Xiao">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1234567891011121314151617181920朋友弋肃，一个不折不扣的当代女汉子。看我最近闲来无聊，遂央求我帮她记录一些故事。好的吧，这是金兰结义的代价。小人物的小故事 ~年龄还小，小草疯长的季节，我们共同走过的年少，幼稚而多情。那天放学回家他和伙伴们拉拉扯扯边走边说闲话她在几十米后亦步亦趋的像丑小鸭时光就这么不紧不慢的刻录着童话这秋天的傍晚凉风习习中夕阳如画小路两旁的杨树林风吹的">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小草无根">
+<meta property="og:url" content="https://daijc.github.io/2016/08/15/s-xiaocao/index.html">
+<meta property="og:site_name" content="Xiao Xiao">
+<meta property="og:description" content="1234567891011121314151617181920朋友弋肃，一个不折不扣的当代女汉子。看我最近闲来无聊，遂央求我帮她记录一些故事。好的吧，这是金兰结义的代价。小人物的小故事 ~年龄还小，小草疯长的季节，我们共同走过的年少，幼稚而多情。那天放学回家他和伙伴们拉拉扯扯边走边说闲话她在几十米后亦步亦趋的像丑小鸭时光就这么不紧不慢的刻录着童话这秋天的傍晚凉风习习中夕阳如画小路两旁的杨树林风吹的">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-09-27T06:15:57.712Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小草无根">
+<meta name="twitter:description" content="1234567891011121314151617181920朋友弋肃，一个不折不扣的当代女汉子。看我最近闲来无聊，遂央求我帮她记录一些故事。好的吧，这是金兰结义的代价。小人物的小故事 ~年龄还小，小草疯长的季节，我们共同走过的年少，幼稚而多情。那天放学回家他和伙伴们拉拉扯扯边走边说闲话她在几十米后亦步亦趋的像丑小鸭时光就这么不紧不慢的刻录着童话这秋天的傍晚凉风习习中夕阳如画小路两旁的杨树林风吹的">
+
+  <link rel="shortcut icon" href="" />
+  <link rel="icon" href="" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script>
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				<!-- <i class="fa fa-home"></i> -->
+				Xiao Xiao
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								<i class="fa fa-home"></i>
+								主页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-projects' href='/categories/前端'>
+								<i class="fa fa-cube"></i>
+								前端
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-blogs' href='/categories/随笔'>
+								<i class="fa fa-heart"></i>
+								随笔
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								<i class="fa fa-archive"></i>
+								归档
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon"><i class="fa fa-search"></i></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><i class="fa fa-search flat-box"></i></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><i class="fa fa-navicon flat-box"></i></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'></a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><i class="fa fa-comments flat-box"></i></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><i class="fa fa-arrow-up flat-box"></i></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><i class="fa fa-list-ul flat-box"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				<i class="fa fa-home"></i>
+				主页
+			</a>
+		
+			<a href="/categories/前端" class="nav-projects nav">
+				<i class="fa fa-cube"></i>
+				前端
+			</a>
+		
+			<a href="/categories/随笔" class="nav-blogs nav">
+				<i class="fa fa-heart"></i>
+				随笔
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				<i class="fa fa-archive"></i>
+				归档
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-s-xiaocao" class="post white-box article-type-post" itemscope itemprop="blogPost">
+    <section class='meta'>
+        <h2 class="title">
+            <a href="/2016/08/15/s-xiaocao/">
+                
+                    小草无根
+                
+            </a>
+        </h2>
+        <time>
+            2016-08-15 星期一&nbsp;&nbsp;
+            <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/随笔/">随笔</a>
+    </div>
+
+
+    </section>
+    
+        <section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#那个村庄"><span class="toc-text">那个村庄</span></a></li></ol></section>
+    
+    <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">朋友弋肃，一个不折不扣的当代女汉子。看我最近闲来无聊，遂央求我帮她记录一些故事。好的吧，这是金兰结义的代价。</span><br><span class="line"></span><br><span class="line">小人物的小故事 ~</span><br><span class="line">年龄还小，小草疯长的季节，我们共同走过的年少，幼稚而多情。</span><br><span class="line"></span><br><span class="line">那天放学回家</span><br><span class="line">他和伙伴们拉拉扯扯边走边说闲话</span><br><span class="line">她在几十米后亦步亦趋的像丑小鸭</span><br><span class="line">时光就这么不紧不慢的刻录着童话</span><br><span class="line"></span><br><span class="line">这秋天的傍晚凉风习习中夕阳如画</span><br><span class="line">小路两旁的杨树林风吹的呼呼啦啦</span><br><span class="line">绿中带黄的落叶三三两两飘飘洒洒</span><br><span class="line">人群中他的背影那么优雅高高大大</span><br><span class="line">听不出他唱着老歌动情的声音沙哑</span><br><span class="line"></span><br><span class="line">多年以后机缘巧合他们互通了电话</span><br><span class="line">原来他也像她当年一样默默中意她</span><br><span class="line">只是阴错阳差几年她已有了新的他</span><br><span class="line">那年空留牵挂</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="那个村庄"><a href="#那个村庄" class="headerlink" title="那个村庄"></a>那个村庄</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这是一个有点落后的农村，一排排的青砖平房里零星的夹杂着几间红瓦房和毛坯房，格外突出的两栋二层楼是整个村子的翘楚，特别的鹤立鸡群。</span><br><span class="line">肃的家是被几排大杨树包围着的单薄的平房，由于建房时资金缺乏，所有的墙都建成了单坯墙，和比人家双坯墙相比显得格外的单薄。她的爸妈都不是父母偏爱的孩子，所有事情都要自力更生，只能这样。所以后来，每当夏季雨季来临时，她都特别的害怕，担心木质不够扎实的杨树会在狂风骤雨中折断， 担心折断的大树砸塌了单坯墙的房子，担心倒塌的房子把自己活埋。噩梦一样包围的不安全感一直持续着，但她没人可以诉说，尤其是看到爸妈不以为然的表情。多年以后，肃在一个雨季南方城市的大楼里，望着窗外因台风而折断的树木，依旧带着淡淡的不安，并庆幸自己离开了那个村庄。</span><br><span class="line">肃是一个没有亲和力的孩子，和别人都淡淡的保持着距离，很不合群。肃与我亲近，或许是因为我们同样生活在一个不安定的家庭，有着经常争吵的父母，同样的缺乏安全感，同样的理性不近人情。家乡孩子们的童年很热闹，大家一起跳皮筋、跳绳子、抓石子、丢沙包、捏泥人、弹弹珠、翻元宝、玩纸牌、捉爬蚱、爬树逮知了，随便一个小东西能玩一天。肃喜欢躺在院子里看云，看带有线条画的武侠小书，偶尔心情好时会和我一起跳皮筋。她不喜欢其他活动，她有洁癖，不喜欢摸脏东西，就连石子也不行。</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+            <div class="article-tags tags">
+                
+                    <a href="/tags/随笔/"><i class="fa fa-tag"></i>&nbsp;&nbsp;随笔</a>
+                
+            </div>
+        
+        
+            <div class="art-item-footer">
+                
+                    <span class="art-item-left">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp;
+                        <a href="/2017/07/15/s-huakai/" rel="prev" title="花开无心">
+                            花开无心
+                        </a>
+                    </span>
+                
+                
+                    <span class="art-item-right">
+                        <a href="/2016/06/16/q-cssmst/" rel="next" title="CSS常见面试题">
+                            CSS常见面试题
+                        </a>&nbsp;
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </span>
+                
+            </div>
+        
+    </section>
+</article>
+
+<style>
+    .reward{text-align: center; font-size: 15px; margin: 20px 0 !important;}
+    .reward .notes{ color:#ff9800;}
+    .reward .btn{margin-top: 20px;}
+    .reward .btn a{background: #5CC281;color: #ffffff; padding: 8px 30px; border-radius: 6px;}
+    .reward .btn a:hover{background: #358451;}
+    .reward .code{display: none;}
+    .reward:hover .code{margin-top: 20px;display: flex;}
+    .reward:hover .code dl{flex: 1;}
+    .reward:hover .code dl dt{}
+    .reward:hover .code dl dt img.pic{width:160px;height: 160px;}
+    .reward:hover .code dl dd{letter-spacing: 2px;}
+</style>
+<article class="post white-box reward">
+    <div class="notes">打赏我的人，运气都不会太差！</div>
+    <div class="btn"><a>打 赏</a></div>
+    <div class="code">
+        <dl>
+            <dt><img class="pic" src='http://pdliii7ak.bkt.clouddn.com/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg' /></dt>
+            <dd>支付宝打赏</dd>
+        </dl>
+        <dl>
+            <dt><img class="pic" src='http://pdliii7ak.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1.jpg' /></dt>
+            <dd>微信打赏</dd>
+        </dl>
+    </div>
+</article>
+
+<!-- 显示推荐文章 -->
+
+<article class="post white-box article-type-post>">
+    <section class="article typo">
+        
+        
+
+    <div class="recommended_posts">
+        <h4><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;你可能感兴趣的文章</h4> 
+        <ul>
+            
+                <li><a href="https://daijc.github.io/2017/11/17/q-jsal/">JS练习题</a></li>
+            
+                <li><a href="https://daijc.github.io/2017/07/17/q-webstormK/">webstorm常用快捷键</a></li>
+            
+                <li><a href="https://daijc.github.io/2017/07/15/s-huakai/">花开无心</a></li>
+            
+                <li><a href="https://daijc.github.io/2016/06/16/q-cssmst/">CSS常见面试题</a></li>
+            
+        </ul>
+    </div>
+
+
+        
+    </section>
+</article>
+
+<br>
+
+<!-- 显示评论 -->
+
+<article class="post white-box article-type-post>">
+    <section class="article typo">
+        
+            
+                <h4><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;&nbsp;评论</h4>
+            
+            
+            
+            
+                
+                    <section id="comments">
+                        <div id="valine_container" class="valine_thread">
+                            </i><i class="fa fa-spinner fa-spin fa-fw"></i>
+                        </div>
+                    </section>
+                
+            
+        
+    </section>
+</article>
+
+
+<script>
+    window.subData = {
+        title: '小草无根',
+        tools: true
+    }
+</script>
+
+
+      </div>
+      <aside class='l_side'>
+        
+	
+
+	
+
+	
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+    <div class="social-wrapper">
+        
+    </div>
+    <br>
+
+    <div>博客内容遵循知识共享协议</div>
+
+    <div>本站使用 Material-X 主题，
+		总访问量为 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+    </div>
+
+</footer>
+
+  <script>setLoadingBarProgress(80);</script>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<!-- 访问统计 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 推荐文章 -->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+var ALGOLIA_API_KEY = "";
+var ALGOLIA_APP_ID = "";
+var ALGOLIA_INDEX_NAME = "";
+var AZURE_SERVICE_NAME = "";
+var AZURE_INDEX_NAME = "";
+var AZURE_QUERY_KEY = "";
+var BAIDU_API_ID = "";
+var SEARCH_SERVICE = "hexo";
+var ROOT = "/"||"/";
+if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+    
+    
+    
+        
+            <script>
+            var GUEST_INFO = ['nick','mail','link'];
+            var guest_info = 'nick,mail'.split(',').filter(function(item){
+                return GUEST_INFO.indexOf(item) > -1
+            });
+            var notify = 'false' == true;
+            var verify = 'false' == true;
+            var valine = new Valine();
+            valine.init({
+                el: '#valine_container',
+                notify: notify,
+                verify: verify,
+                guest_info: guest_info,
+                appId: "bEFytQ4Rpyo4jzlqfudykpsp-gzGzoHsz",
+                appKey: "9TNjGhdqST9S4QB3yieeAeEC",
+                placeholder: "快来评论吧~",
+                pageSize:'10',
+                avatar:'mp',
+                lang:'zh-cn'
+            })
+            </script>
+        
+    
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

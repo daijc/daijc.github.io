@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  <title>JS常见面试题 | Xiao Xiao</title>
+  <meta name="description" content="记录生活点滴，留存过往记忆" />
+  <meta name="keywords" content="前端面试题,小草无根,花开无心,落叶无根" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" href="/">
+  <link rel="alternate" href="/atom.xml" title="Xiao Xiao">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JS基础1、javascript 的 typeof 返回哪些数据类型12345678object, number, function, boolean, underfind, stringtypeof null;//objecttypeof isNaN;//typeof isNaN(123)typeof [];//objectArray.isARRAY(); es5toString.call([]">
+<meta name="keywords" content="前端,Javascript,Jquery,Zepto,Ajax,Json,Nodejs,Requirejs,面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS常见面试题">
+<meta property="og:url" content="https://daijc.github.io/2018/08/16/q-jsmst/index.html">
+<meta property="og:site_name" content="Xiao Xiao">
+<meta property="og:description" content="JS基础1、javascript 的 typeof 返回哪些数据类型12345678object, number, function, boolean, underfind, stringtypeof null;//objecttypeof isNaN;//typeof isNaN(123)typeof [];//objectArray.isARRAY(); es5toString.call([]">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-11-09T08:57:53.490Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS常见面试题">
+<meta name="twitter:description" content="JS基础1、javascript 的 typeof 返回哪些数据类型12345678object, number, function, boolean, underfind, stringtypeof null;//objecttypeof isNaN;//typeof isNaN(123)typeof [];//objectArray.isARRAY(); es5toString.call([]">
+
+  <link rel="shortcut icon" href="" />
+  <link rel="icon" href="" />
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href='//cdn.bootcss.com/node-waves/0.7.5/waves.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+
+
+  <script>setLoadingBarProgress(20)</script>
+  <header class="l_header">
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+			<a class="logo flat-box" href='/' >
+				<!-- <i class="fa fa-home"></i> -->
+				Xiao Xiao
+			</a>
+			<div class='menu'>
+				<ul class='h-list'>
+					
+						<li>
+							<a class='flat-box nav-home' href='/'>
+								<i class="fa fa-home"></i>
+								主页
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-projects' href='/categories/前端'>
+								<i class="fa fa-cube"></i>
+								前端
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-blogs' href='/categories/随笔'>
+								<i class="fa fa-heart"></i>
+								随笔
+							</a>
+						</li>
+					
+						<li>
+							<a class='flat-box nav-archives' href='/archives'>
+								<i class="fa fa-archive"></i>
+								归档
+							</a>
+						</li>
+					
+				</ul>
+				<div class='underline'></div>
+			</div>
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="Search" />
+						<span class="icon"><i class="fa fa-search"></i></span>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a href='javascript:void(0)'><i class="fa fa-search flat-box"></i></span></a></li>
+				
+				<li class='s-menu'><a href='javascript:void(0)'><i class="fa fa-navicon flat-box"></i></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo" class="flat-box" href='javascript:void(0)'></a>
+
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a href='javascript:void(0)'><i class="fa fa-comments flat-box"></i></a></li>
+				<li class='s-top'><a href='javascript:void(0)'><i class="fa fa-arrow-up flat-box"></i></a></li>
+				<li class='s-toc'><a href='javascript:void(0)'><i class="fa fa-list-ul flat-box"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<aside class="menu-phone">
+	<nav>
+		
+			<a href="/" class="nav-home nav">
+				<i class="fa fa-home"></i>
+				主页
+			</a>
+		
+			<a href="/categories/前端" class="nav-projects nav">
+				<i class="fa fa-cube"></i>
+				前端
+			</a>
+		
+			<a href="/categories/随笔" class="nav-blogs nav">
+				<i class="fa fa-heart"></i>
+				随笔
+			</a>
+		
+			<a href="/archives" class="nav-archives nav">
+				<i class="fa fa-archive"></i>
+				归档
+			</a>
+		
+	</nav>
+</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+  <div class="l_body">
+    <div class='container clearfix'>
+      <div class='l_main'>
+        <article id="post-q-jsmst" class="post white-box article-type-post" itemscope itemprop="blogPost">
+    <section class='meta'>
+        <h2 class="title">
+            <a href="/2018/08/16/q-jsmst/">
+                
+                    JS常见面试题
+                
+            </a>
+        </h2>
+        <time>
+            2018-08-16 星期四&nbsp;&nbsp;
+            <i class="fa fa-eye" aria-hidden="true"></i>&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+        </time>
+        
+    
+    <div class='cats'>
+        <a href="/categories/前端/">前端</a>
+    </div>
+
+
+    </section>
+    
+        <section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#JS基础"><span class="toc-text">JS基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、javascript-的-typeof-返回哪些数据类型"><span class="toc-text">1、javascript 的 typeof 返回哪些数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、例举-3-种强制类型转换和-2-种隐式类型转换"><span class="toc-text">2、例举 3 种强制类型转换和 2 种隐式类型转换?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、split-join-的区别"><span class="toc-text">3、split() join() 的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、数组方法-pop-push-unshift-shift"><span class="toc-text">4、数组方法 pop() push() unshift() shift()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、事件绑定和普通事件的区别"><span class="toc-text">5、事件绑定和普通事件的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、IE-和-DOM-事件流的区别"><span class="toc-text">6、IE 和 DOM 事件流的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、IE-和标准下有哪些兼容性的写法"><span class="toc-text">7、IE 和标准下有哪些兼容性的写法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8、call-和-apply-的区别"><span class="toc-text">8、call 和 apply 的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9、b-继承-a-的方法"><span class="toc-text">9、b 继承 a 的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10、指针、闭包、作用域"><span class="toc-text">10、指针、闭包、作用域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11、事件委托是什么"><span class="toc-text">11、事件委托是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12、如何阻止事件冒泡和默认事件"><span class="toc-text">12、如何阻止事件冒泡和默认事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13、document-load-和-document-ready-的区别"><span class="toc-text">13、document load 和 document ready 的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14、编写一个数组去重的方法"><span class="toc-text">14、编写一个数组去重的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15、foo-foo-bar-，这行代码是什么意思？"><span class="toc-text">15、foo = foo||bar ，这行代码是什么意思？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16、随机选取-10–100-之间的-10-个数字，存入一个数组，并排序。"><span class="toc-text">16、随机选取 10–100 之间的 10 个数字，存入一个数组，并排序。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17、把两个数组合并，并删除第二个元素。"><span class="toc-text">17、把两个数组合并，并删除第二个元素。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18、写一个-function，清除字符串前后的空格。（兼容所有浏览器）"><span class="toc-text">18、写一个 function，清除字符串前后的空格。（兼容所有浏览器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19、列举浏览器对象模型-BOM-里常用的至少-4-个对象，并列举-window-对象的常用方法至少-5-个"><span class="toc-text">19、列举浏览器对象模型 BOM 里常用的至少 4 个对象，并列举 window 对象的常用方法至少 5 个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20、文档对象模型-DOM-里-document-的常用的查找访问节点的方法"><span class="toc-text">20、文档对象模型 DOM 里 document 的常用的查找访问节点的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21、iframe-的优缺点？"><span class="toc-text">21、iframe 的优缺点？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22、谈谈-Cookie-的弊端？"><span class="toc-text">22、谈谈 Cookie 的弊端？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23、DOM-操作——怎样添加、移除、移动、复制、创建和查找节点。"><span class="toc-text">23、DOM 操作——怎样添加、移除、移动、复制、创建和查找节点。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24、js-延迟加载的方式有哪些？"><span class="toc-text">24、js 延迟加载的方式有哪些？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#25、documen-write-和-innerHTML-的区别？"><span class="toc-text">25、documen.write 和 innerHTML 的区别？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#26、哪些操作会造成内存泄漏？"><span class="toc-text">26、哪些操作会造成内存泄漏？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#27、IE-和-DOM-事件流的区别"><span class="toc-text">27、IE 和 DOM 事件流的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#28、什么是闭包？-写一个简单的闭包？"><span class="toc-text">28、什么是闭包？ 写一个简单的闭包？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#29、javascript-中的垃圾回收机制？"><span class="toc-text">29、javascript 中的垃圾回收机制？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#30、什么是同源策略？"><span class="toc-text">30、什么是同源策略？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#31、BOM-对象有哪些，列举-window-对象？"><span class="toc-text">31、BOM 对象有哪些，列举 window 对象？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#32、bind-live-delegate-的区别"><span class="toc-text">32、bind(), live(), delegate()的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#33、你如何优化自己的代码？"><span class="toc-text">33、你如何优化自己的代码？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#34、列举常用的-js-框架以及分别适用的领域"><span class="toc-text">34、列举常用的 js 框架以及分别适用的领域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#35、列出-3-条以上-ff-和-IE-的脚本兼容问题"><span class="toc-text">35、列出 3 条以上 ff 和 IE 的脚本兼容问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JS高级"><span class="toc-text">JS高级</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、什么是-webkit-么-怎么用浏览器的各种工具来调试和-debug-代码"><span class="toc-text">1、什么是 webkit 么? 怎么用浏览器的各种工具来调试和 debug 代码?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、如何测试前端代码-知道-BDD-TDD-Unit-Test-么-怎么测试你的前端工程-mocha-sinon-jasmin-qUnit"><span class="toc-text">2、如何测试前端代码? 知道 BDD, TDD, Unit Test 么? 怎么测试你的前端工程(mocha, sinon, jasmin, qUnit..)?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、前端-templating-Mustache-underscore-handlebars-是干嘛的-怎么用"><span class="toc-text">3、前端 templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、-Javascript-作用域链"><span class="toc-text">4、 Javascript 作用域链?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、-谈谈-this-对象的理解。"><span class="toc-text">5、 谈谈 this 对象的理解。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、-eval-是做什么的？"><span class="toc-text">6、 eval 是做什么的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、-关于事件，IE-与火狐的事件机制有什么区别？-如何阻止冒泡？"><span class="toc-text">7、 关于事件，IE 与火狐的事件机制有什么区别？ 如何阻止冒泡？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8、-什么是闭包（closure），为什么要用它？"><span class="toc-text">8、 什么是闭包（closure），为什么要用它？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9、new-操作符具体干了什么呢"><span class="toc-text">9、new 操作符具体干了什么呢?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10、js-延迟加载的方式有哪些？"><span class="toc-text">10、js 延迟加载的方式有哪些？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11、模块化开发怎么做？"><span class="toc-text">11、模块化开发怎么做？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12、requireJS-的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何-缓存的？）"><span class="toc-text">12、requireJS 的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13、数组和对象有哪些原生方法，列举一下？"><span class="toc-text">13、数组和对象有哪些原生方法，列举一下？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14、如何编写高性能的-Javascript？"><span class="toc-text">14、如何编写高性能的 Javascript？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15、javascript-对象的几种创建方式？"><span class="toc-text">15、javascript 对象的几种创建方式？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16、javascript-继承的-6-种方法？"><span class="toc-text">16、javascript 继承的 6 种方法？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17、eval-是做什么的？"><span class="toc-text">17、eval 是做什么的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18、JavaScript-原型，原型链-有什么特点？"><span class="toc-text">18、JavaScript 原型，原型链 ? 有什么特点？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19、分别阐述-split-slice-splice-join-？"><span class="toc-text">19、分别阐述 split(),slice(),splice(),join()？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20、http-状态码有那些？分别代表是什么意思？"><span class="toc-text">20、http 状态码有那些？分别代表是什么意思？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21、针对-jQuery-的优化方法？"><span class="toc-text">21、针对 jQuery 的优化方法？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22、Zepto-的点透问题如何解决？"><span class="toc-text">22、Zepto 的点透问题如何解决？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23、知道各种-JS-框架-Angular-Backbone-Ember-React-Meteor-Knockout…-么-能讲出他们各自的优点和缺点么"><span class="toc-text">23、知道各种 JS 框架(Angular, Backbone, Ember, React, Meteor, Knockout…)么? 能讲出他们各自的优点和缺点么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24、对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？"><span class="toc-text">24、对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NodeJs"><span class="toc-text">NodeJs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、对-Node-的优点和缺点提出了自己的看法："><span class="toc-text">1、对 Node 的优点和缺点提出了自己的看法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？"><span class="toc-text">2、需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Node-js-的适用场景？"><span class="toc-text">3、Node.js 的适用场景？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、-如果会用-node-知道-route-middleware-cluster-nodemon-pm2-server-side-rendering-么"><span class="toc-text">4、(如果会用 node)知道 route, middleware, cluster, nodemon, pm2, server-side rendering 么?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、解释一下-Backbone-的-MVC-实现方式"><span class="toc-text">5、解释一下 Backbone 的 MVC 实现方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、什么是“前端路由”-什么时候适合使用“前端路由”-“前端路由”有哪些优点和缺点"><span class="toc-text">6、什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、对-Node-的优点和缺点提出了自己的看法？"><span class="toc-text">7、对 Node 的优点和缺点提出了自己的看法？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#AJAX"><span class="toc-text">AJAX</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、如何解决跨域问题"><span class="toc-text">1、如何解决跨域问题?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、页面编码和被请求的资源编码如果不一致如何处理？"><span class="toc-text">2、页面编码和被请求的资源编码如果不一致如何处理？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、简述-ajax-的过程。"><span class="toc-text">3、简述 ajax 的过程。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、阐述一下异步加载。"><span class="toc-text">4、阐述一下异步加载。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、解释-jsonp-的原理，以及为什么不是真正的-ajax"><span class="toc-text">5、解释 jsonp 的原理，以及为什么不是真正的 ajax</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、什么是-Ajax-和-JSON，它们的优缺点。"><span class="toc-text">6、什么是 Ajax 和 JSON，它们的优缺点。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？"><span class="toc-text">7、一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8、ajax-请求的时候-get-和-post-方式的区别"><span class="toc-text">8、ajax 请求的时候 get 和 post 方式的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9、ajax-请求时，如何解释-json-数据"><span class="toc-text">9、ajax 请求时，如何解释 json 数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10、两个数组的差集"><span class="toc-text">10、两个数组的差集</span></a></li></ol></li></ol></section>
+    
+    <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="JS基础"><a href="#JS基础" class="headerlink" title="JS基础"></a>JS基础</h2><h3 id="1、javascript-的-typeof-返回哪些数据类型"><a href="#1、javascript-的-typeof-返回哪些数据类型" class="headerlink" title="1、javascript 的 typeof 返回哪些数据类型"></a>1、javascript 的 typeof 返回哪些数据类型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">object, number, function, boolean, underfind, string</span><br><span class="line">typeof null;//object</span><br><span class="line">typeof isNaN;//</span><br><span class="line">typeof isNaN(123)</span><br><span class="line">typeof [];//object</span><br><span class="line">Array.isARRAY(); es5</span><br><span class="line">toString.call([]);//”[object Array]” var arr=[];</span><br><span class="line">arr.constructor;//Array</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="2、例举-3-种强制类型转换和-2-种隐式类型转换"><a href="#2、例举-3-种强制类型转换和-2-种隐式类型转换" class="headerlink" title="2、例举 3 种强制类型转换和 2 种隐式类型转换?"></a>2、例举 3 种强制类型转换和 2 种隐式类型转换?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">强制（parseInt,parseFloat,Number()）</span><br><span class="line">隐式（==）</span><br><span class="line">1==”1”//true</span><br><span class="line">null==undefined//true</span><br></pre></td></tr></table></figure>
+<h3 id="3、split-join-的区别"><a href="#3、split-join-的区别" class="headerlink" title="3、split() join() 的区别"></a>3、split() join() 的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">split()是切割成数组的形式，</span><br><span class="line">join()是将数组转换成字符串</span><br></pre></td></tr></table></figure>
+<h3 id="4、数组方法-pop-push-unshift-shift"><a href="#4、数组方法-pop-push-unshift-shift" class="headerlink" title="4、数组方法 pop() push() unshift() shift()"></a>4、数组方法 pop() push() unshift() shift()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pop()尾部删除</span><br><span class="line">push()尾部添加</span><br><span class="line">unshift()头部添加</span><br><span class="line">shift()头部删除</span><br></pre></td></tr></table></figure>
+<h3 id="5、事件绑定和普通事件的区别"><a href="#5、事件绑定和普通事件的区别" class="headerlink" title="5、事件绑定和普通事件的区别"></a>5、事件绑定和普通事件的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">事件绑定是指把事件注册到具体的元素之上，普通事件指的是可以用来注册的事件</span><br><span class="line">如果说给同一个元素绑定了两次或者多次相同类型的事件，那么后面的绑定会覆盖前面的绑定</span><br><span class="line">不支持 DOM 事件流 事件捕获阶段目标元素阶段=&gt;事件冒泡阶段</span><br><span class="line">addEventListener</span><br><span class="line">如果说给同一个元素绑定了两次或者多次相同类型的事件，所有的绑定将会依次触发</span><br><span class="line">支持 DOM 事件流的</span><br><span class="line">进行事件绑定传参不需要 on 前缀</span><br><span class="line">ie9 开始，ie11 edge：addEventListener</span><br><span class="line">ie9 以前：attachEvent/detachEvent</span><br><span class="line">进行事件类型传参需要带上 on 前缀</span><br><span class="line">这种方式只支持事件冒泡，不支持事件捕获</span><br></pre></td></tr></table></figure>
+<h3 id="6、IE-和-DOM-事件流的区别"><a href="#6、IE-和-DOM-事件流的区别" class="headerlink" title="6、IE 和 DOM 事件流的区别"></a>6、IE 和 DOM 事件流的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">执行顺序不一样、</span><br><span class="line">参数不一样</span><br><span class="line">事件加不加 on</span><br><span class="line">this 指向问题</span><br><span class="line">IE9 以前：attachEvent(“onclick”)、detachEvent(“onclick”)</span><br><span class="line">IE9 开始跟 DOM 事件流是一样的，都是 addEventListener</span><br></pre></td></tr></table></figure>
+<h3 id="7、IE-和标准下有哪些兼容性的写法"><a href="#7、IE-和标准下有哪些兼容性的写法" class="headerlink" title="7、IE 和标准下有哪些兼容性的写法"></a>7、IE 和标准下有哪些兼容性的写法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var ev = ev || window.event</span><br><span class="line">document.documentElement.clientWidth || document.body.clientWidth</span><br><span class="line">var target = ev.srcElement||ev.target</span><br></pre></td></tr></table></figure>
+<h3 id="8、call-和-apply-的区别"><a href="#8、call-和-apply-的区别" class="headerlink" title="8、call 和 apply 的区别"></a>8、call 和 apply 的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">call 和 apply 相同点：都是为了用一个本不属于一个对象的方法，让这个对象去执行</span><br><span class="line">toString.call([],1,2,3)</span><br><span class="line">toString.apply([],[1,2,3])</span><br><span class="line">Object.call(this,obj1,obj2,obj3)</span><br><span class="line">Object.apply(this,arguments)</span><br></pre></td></tr></table></figure>
+<h3 id="9、b-继承-a-的方法"><a href="#9、b-继承-a-的方法" class="headerlink" title="9、b 继承 a 的方法"></a>9、b 继承 a 的方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">考点：继承的多种方式</span><br><span class="line">function b()&#123;&#125;</span><br><span class="line">b.protoototype=new a;</span><br></pre></td></tr></table></figure>
+<h3 id="10、指针、闭包、作用域"><a href="#10、指针、闭包、作用域" class="headerlink" title="10、指针、闭包、作用域"></a>10、指针、闭包、作用域</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this：指向调用上下文</span><br><span class="line">闭包：内层作用域可以访问外层作用域的变量</span><br><span class="line">作用域：定义一个函数就开辟了一个局部作用域，整个 js 执行环境有一个全局作用域</span><br><span class="line">闭包的缺点：滥用闭包函数会造成内存泄露，因为闭包中引用到的包裹函数中定义的变量都永远不会被释放，所以我们应该在必要的时候，及时释放这个闭包函数</span><br></pre></td></tr></table></figure>
+<h3 id="11、事件委托是什么"><a href="#11、事件委托是什么" class="headerlink" title="11、事件委托是什么"></a>11、事件委托是什么</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">符合 W3C 标准的事件绑定 addEventLisntener /attachEvent</span><br><span class="line">让利用事件冒泡的原理，让自己的所触发的事件，让他的父元素代替执行！</span><br></pre></td></tr></table></figure>
+<h3 id="12、如何阻止事件冒泡和默认事件"><a href="#12、如何阻止事件冒泡和默认事件" class="headerlink" title="12、如何阻止事件冒泡和默认事件"></a>12、如何阻止事件冒泡和默认事件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">e. stopPropagation();//标准浏览器</span><br><span class="line">event.canceBubble=true;//ie9 之前</span><br><span class="line">阻止默认事件：为了不让 a 点击之后跳转，我们就要给他的点击事件进行阻止</span><br><span class="line">return false</span><br><span class="line">e.preventDefault();</span><br></pre></td></tr></table></figure>
+<h3 id="13、document-load-和-document-ready-的区别"><a href="#13、document-load-和-document-ready-的区别" class="headerlink" title="13、document load 和 document ready 的区别"></a>13、document load 和 document ready 的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Document.onload 是在结构和样式加载完才执行 js</span><br><span class="line">window.onload：不仅仅要在结构和样式加载完，还要执行完所有的样式、图片这些资源文件，全部加载完才会触发 window.onload 事件</span><br><span class="line">Document.ready 原生中没有这个方法，jquery 中有 $().ready(function)</span><br></pre></td></tr></table></figure>
+<h3 id="14、编写一个数组去重的方法"><a href="#14、编写一个数组去重的方法" class="headerlink" title="14、编写一个数组去重的方法"></a>14、编写一个数组去重的方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var arr=[1,1,3,4,2,4,7]; =&gt;[1,3,4,2,7] 一个比较简单的实现就是：</span><br><span class="line">先创建一个空数组，用来保存最终的结果</span><br><span class="line">循环原数组中的每个元素</span><br><span class="line">再对每个元素进行二次循环，判断是否有与之相同的元素，如果没有，将把这个元素放到新数组中</span><br><span class="line">返回这个新数组</span><br><span class="line">function oSort(arr) &#123;</span><br><span class="line">var result =&#123;&#125;;</span><br><span class="line">var newArr=[];</span><br><span class="line">for(var i=0;i&lt;arr.length;i++)&#123;</span><br><span class="line">if(!result[arr]) &#123;</span><br><span class="line">newArr.push(arr)</span><br><span class="line">result[arr]=1</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">return newArr</span><br><span class="line">&#125;&lt;/arr.length;i++)</span><br></pre></td></tr></table></figure>
+<h3 id="15、foo-foo-bar-，这行代码是什么意思？"><a href="#15、foo-foo-bar-，这行代码是什么意思？" class="headerlink" title="15、foo = foo||bar ，这行代码是什么意思？"></a>15、foo = foo||bar ，这行代码是什么意思？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">这种写法称之为短路表达式</span><br><span class="line">if(!foo) foo = bar; //如果 foo 存在，值不变，否则把 bar 的值赋给 foo。</span><br><span class="line">短路表达式：作为”&amp;&amp;”和”||”操作符的操作数表达式，这些表达式在进行求值时，只要最终的结果已经可以确定是真或假，求值过程便告终止，这称之为短路求值。</span><br><span class="line">注意 if 条件的真假判定，记住以下是 false 的情况：空字符串、false、undefined、null、0</span><br></pre></td></tr></table></figure>
+<h3 id="16、随机选取-10–100-之间的-10-个数字，存入一个数组，并排序。"><a href="#16、随机选取-10–100-之间的-10-个数字，存入一个数组，并排序。" class="headerlink" title="16、随机选取 10–100 之间的 10 个数字，存入一个数组，并排序。"></a>16、随机选取 10–100 之间的 10 个数字，存入一个数组，并排序。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var iArray = [];</span><br><span class="line">funtion getRandom(istart, iend)&#123;</span><br><span class="line">var iChoice = istart - iend +1;</span><br><span class="line">return Math.floor(Math.random() * iChoice + istart;</span><br><span class="line">&#125;</span><br><span class="line">Math.random()就是获取 0-1 之间的随机数（永远获取不到 1）</span><br><span class="line">for(var i=0; i&lt;10; i++)&#123;</span><br><span class="line">var result= getRandom(10,100);</span><br><span class="line">iArray.push(result);</span><br><span class="line">&#125;</span><br><span class="line">iArray.sort();</span><br></pre></td></tr></table></figure>
+<h3 id="17、把两个数组合并，并删除第二个元素。"><a href="#17、把两个数组合并，并删除第二个元素。" class="headerlink" title="17、把两个数组合并，并删除第二个元素。"></a>17、把两个数组合并，并删除第二个元素。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var array1 = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;];</span><br><span class="line">var bArray = [&apos;d&apos;,&apos;e&apos;,&apos;f&apos;];</span><br><span class="line">var cArray = array1.concat(bArray);</span><br><span class="line">cArray.splice(1,1);</span><br></pre></td></tr></table></figure>
+<h3 id="18、写一个-function，清除字符串前后的空格。（兼容所有浏览器）"><a href="#18、写一个-function，清除字符串前后的空格。（兼容所有浏览器）" class="headerlink" title="18、写一个 function，清除字符串前后的空格。（兼容所有浏览器）"></a>18、写一个 function，清除字符串前后的空格。（兼容所有浏览器）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">使用自带接口 trim()，考虑兼容性：</span><br><span class="line">if (!String.prototype.trim) &#123;</span><br><span class="line">String.prototype.trim = function() &#123;</span><br><span class="line">return this.replace(/^\s+/, &quot;&quot;).replace(/\s+$/,&quot;&quot;);</span><br><span class="line">//\s 匹配空白字符：回车、换行、制表符 tab 空格</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">// test the function</span><br><span class="line">var str = &quot; \t\n test string &quot;.trim();</span><br><span class="line">alert(str == &quot;test string&quot;); // alerts &quot;true&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="19、列举浏览器对象模型-BOM-里常用的至少-4-个对象，并列举-window-对象的常用方法至少-5-个"><a href="#19、列举浏览器对象模型-BOM-里常用的至少-4-个对象，并列举-window-对象的常用方法至少-5-个" class="headerlink" title="19、列举浏览器对象模型 BOM 里常用的至少 4 个对象，并列举 window 对象的常用方法至少 5 个"></a>19、列举浏览器对象模型 BOM 里常用的至少 4 个对象，并列举 window 对象的常用方法至少 5 个</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">对象：Window document location screen history navigator</span><br><span class="line">方法：Alert() confirm() prompt() open() close()</span><br></pre></td></tr></table></figure>
+<h3 id="20、文档对象模型-DOM-里-document-的常用的查找访问节点的方法"><a href="#20、文档对象模型-DOM-里-document-的常用的查找访问节点的方法" class="headerlink" title="20、文档对象模型 DOM 里 document 的常用的查找访问节点的方法"></a>20、文档对象模型 DOM 里 document 的常用的查找访问节点的方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Document.getElementById 根据元素 id 查找元素</span><br><span class="line">Document.getElementByName 根据元素 name 查找元素</span><br><span class="line">Document.getElementTagName 根据指定的元素名查找元素</span><br></pre></td></tr></table></figure>
+<h3 id="21、iframe-的优缺点？"><a href="#21、iframe-的优缺点？" class="headerlink" title="21、iframe 的优缺点？"></a>21、iframe 的优缺点？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">优点：解决加载缓慢的第三方内容如图标和广告等的加载问题,Security sandbox,并行加载脚本</span><br><span class="line">缺点：iframe 会阻塞主页面的 Onload 事件,即时内容为空，加载也需要时间,没有语意</span><br></pre></td></tr></table></figure>
+<h3 id="22、谈谈-Cookie-的弊端？"><a href="#22、谈谈-Cookie-的弊端？" class="headerlink" title="22、谈谈 Cookie 的弊端？"></a>22、谈谈 Cookie 的弊端？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">`Cookie`数量和长度的限制。每个 domain 最多只能有 20 条 cookie，每个 cookie 长度不能超过 4KB，否则会被截掉。</span><br><span class="line">安全性问题。如果 cookie 被人拦截了，那人就可以取得所有的 session 信息。即使加密也与事无补，因为拦截者并不需要知道 cookie 的意义，他只要原样转发 cookie 就可以达到目的了。</span><br><span class="line">有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务器端保存一个计数器。如果我们把这个计数器保存在客户端，那么它起不到任何作用</span><br></pre></td></tr></table></figure>
+<h3 id="23、DOM-操作——怎样添加、移除、移动、复制、创建和查找节点。"><a href="#23、DOM-操作——怎样添加、移除、移动、复制、创建和查找节点。" class="headerlink" title="23、DOM 操作——怎样添加、移除、移动、复制、创建和查找节点。"></a>23、DOM 操作——怎样添加、移除、移动、复制、创建和查找节点。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1. 创建新节点</span><br><span class="line">createDocumentFragment() // 创建一个 DOM 片段</span><br><span class="line">createElement() // 创建一个具体的元素</span><br><span class="line">createTextNode() // 创建一个文本节点</span><br><span class="line">2. 添加、移除、替换、插入</span><br><span class="line">appendChild()</span><br><span class="line">removeChild()</span><br><span class="line">replaceChild()</span><br><span class="line">insertBefore() // 在已有的子节点前插入一个新的子节点</span><br><span class="line">3. 查找</span><br><span class="line">getElementsByTagName() // 通过标签名称</span><br><span class="line">getElementsByName() // 通过元素的 Name 属性的值(IE 容错能力较强，会得到一个数组，其中包括 id 等于 name 值的)</span><br><span class="line">getElementById() // 通过元素 Id，唯一性</span><br></pre></td></tr></table></figure>
+<h3 id="24、js-延迟加载的方式有哪些？"><a href="#24、js-延迟加载的方式有哪些？" class="headerlink" title="24、js 延迟加载的方式有哪些？"></a>24、js 延迟加载的方式有哪些？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">defer 和 async</span><br><span class="line">动态创建 DOM 方式（创建 script，插入到 DOM 中，加载完毕后 callBack）</span><br><span class="line">按需异步载入 js</span><br></pre></td></tr></table></figure>
+<h3 id="25、documen-write-和-innerHTML-的区别？"><a href="#25、documen-write-和-innerHTML-的区别？" class="headerlink" title="25、documen.write 和 innerHTML 的区别？"></a>25、documen.write 和 innerHTML 的区别？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.write 只能重绘整个页面</span><br><span class="line">innerHTML 可以重绘页面的一部分</span><br></pre></td></tr></table></figure>
+<h3 id="26、哪些操作会造成内存泄漏？"><a href="#26、哪些操作会造成内存泄漏？" class="headerlink" title="26、哪些操作会造成内存泄漏？"></a>26、哪些操作会造成内存泄漏？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">内存泄漏指任何对象在您不再拥有或需要它之后仍然存在。</span><br><span class="line">垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收。</span><br><span class="line">setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。</span><br><span class="line">闭包</span><br><span class="line">控制台日志</span><br><span class="line">循环（在两个对象彼此引用且彼此保留时，就会产生一个循环）</span><br></pre></td></tr></table></figure>
+<h3 id="27、IE-和-DOM-事件流的区别"><a href="#27、IE-和-DOM-事件流的区别" class="headerlink" title="27、IE 和 DOM 事件流的区别"></a>27、IE 和 DOM 事件流的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">执行顺序不一样、</span><br><span class="line">参数不一样</span><br><span class="line">事件加不加 on</span><br><span class="line">this 指向问题</span><br></pre></td></tr></table></figure>
+<h3 id="28、什么是闭包？-写一个简单的闭包？"><a href="#28、什么是闭包？-写一个简单的闭包？" class="headerlink" title="28、什么是闭包？ 写一个简单的闭包？"></a>28、什么是闭包？ 写一个简单的闭包？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">闭包就是能够读取其他函数内部变量的函数。在本质上，闭包就是将函数内部和函数外部连接起来的一座桥梁。</span><br><span class="line">function outer()&#123;</span><br><span class="line">var num = 1;</span><br><span class="line">function inner()&#123;</span><br><span class="line">var n = 2;</span><br><span class="line">alert(n + num);</span><br><span class="line">&#125;</span><br><span class="line">return inner;</span><br><span class="line">&#125;</span><br><span class="line">outer()();</span><br></pre></td></tr></table></figure>
+<h3 id="29、javascript-中的垃圾回收机制？"><a href="#29、javascript-中的垃圾回收机制？" class="headerlink" title="29、javascript 中的垃圾回收机制？"></a>29、javascript 中的垃圾回收机制？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在 Javascript 中，如果一个对象不再被引用，那么这个对象就会被 GC回收。如果两个对象互相引用，而不再 被第 3 者所引用，那么这两个互相引用的对象也会被回收。因为函数 a 被 b 引用，b 又被 a 外的 c 引用，这就是为什么 函数 a 执行后不会被回收的原因。</span><br></pre></td></tr></table></figure>
+<h3 id="30、什么是同源策略？"><a href="#30、什么是同源策略？" class="headerlink" title="30、什么是同源策略？"></a>30、什么是同源策略？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">同协议、端口、域名的安全策略，由网景(Netscape)公司提出来的安全协议！</span><br></pre></td></tr></table></figure>
+<h3 id="31、BOM-对象有哪些，列举-window-对象？"><a href="#31、BOM-对象有哪些，列举-window-对象？" class="headerlink" title="31、BOM 对象有哪些，列举 window 对象？"></a>31、BOM 对象有哪些，列举 window 对象？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">window 对象 ，是 JS 的最顶层对象，其他的 BOM 对象都是 window 对象的属性；</span><br><span class="line">document 对象，文档对象；</span><br><span class="line">location 对象，浏览器当前 URL 信息；</span><br><span class="line">navigator 对象，浏览器本身信息；</span><br><span class="line">screen 对象，客户端屏幕信息；</span><br><span class="line">history 对象，浏览器访问历史信息；</span><br></pre></td></tr></table></figure>
+<h3 id="32、bind-live-delegate-的区别"><a href="#32、bind-live-delegate-的区别" class="headerlink" title="32、bind(), live(), delegate()的区别"></a>32、bind(), live(), delegate()的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bind： 绑定事件，对新添加的事件不起作用，方法用于将一个处理程序附加到每个匹配元素的事件上并返回 jQuery 对象。</span><br><span class="line">live： 方法将一个事件处理程序附加到与当前选择器匹配的所有元素（包含现有的或将来添加的）的指定事件上并返回 jQuery 对象。</span><br><span class="line">delegate： 方法基于一组特定的根元素将处理程序附加到匹配选择器的所有元素（现有的或将来的）的一个或多个事件上。</span><br></pre></td></tr></table></figure>
+<h3 id="33、你如何优化自己的代码？"><a href="#33、你如何优化自己的代码？" class="headerlink" title="33、你如何优化自己的代码？"></a>33、你如何优化自己的代码？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">代码重用</span><br><span class="line">避免全局变量（命名空间，封闭空间，模块化 mvc..）</span><br><span class="line">拆分函数避免函数过于臃肿：单一职责原则</span><br><span class="line">适当的注释，尤其是一些复杂的业务逻辑或者是计算逻辑，都应该写出这个业务逻辑的具体过程</span><br><span class="line">内存管理，尤其是闭包中的变量释放</span><br></pre></td></tr></table></figure>
+<h3 id="34、列举常用的-js-框架以及分别适用的领域"><a href="#34、列举常用的-js-框架以及分别适用的领域" class="headerlink" title="34、列举常用的 js 框架以及分别适用的领域"></a>34、列举常用的 js 框架以及分别适用的领域</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">jquery：简化了 js 的一些操作，并且提供了一些非常好用的 API</span><br><span class="line">jquery ui、jquery-easyui：在 jqeury 的基础上提供了一些常用的组件 日期，下拉框，表格这些组件</span><br><span class="line">require.js、sea.js（阿里的玉帛）+》模块化开发使用的</span><br><span class="line">zepto：精简版的 jquery，常用于手机 web 前端开发 提供了一些手机页面实用功能,touch</span><br><span class="line">ext.js：跟 jquery 差不多，但是不开源，也没有 jquery 轻量</span><br><span class="line">angular、knockoutjs、avalon(去哪儿前端总监)：MV*框架，适合用于单页应用开发(SPA)</span><br></pre></td></tr></table></figure>
+<h3 id="35、列出-3-条以上-ff-和-IE-的脚本兼容问题"><a href="#35、列出-3-条以上-ff-和-IE-的脚本兼容问题" class="headerlink" title="35、列出 3 条以上 ff 和 IE 的脚本兼容问题"></a>35、列出 3 条以上 ff 和 IE 的脚本兼容问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">在 IE 下可通过 document.frames[&quot;id&quot;];得到该 IFRAME 对象，而在火狐下则是通过 document.getElementById(&quot;content_panel_if&quot;).contentWindow;</span><br><span class="line">IE 的写法： _tbody=_table.childNodes[0]</span><br><span class="line">在 FF 中，firefox 会在子节点中包含空白则第一个子节点为空白&quot;&quot;， 而 ie 不会返回空白,可以通过 if(&quot;&quot; != node.nodeName)过滤掉空白子对象</span><br><span class="line">模拟点击事件</span><br><span class="line">if(document.all)&#123; //ie 下</span><br><span class="line">document.getElementById(&quot;a3&quot;).click();</span><br><span class="line">&#125;</span><br><span class="line">else&#123; //非 IE</span><br><span class="line">var evt = document.createEvent(&quot;MouseEvents&quot;);</span><br><span class="line">evt.initEvent(&quot;click&quot;, true, true);</span><br><span class="line">document.getElementById(&quot;a3&quot;).dispatchEvent(evt);</span><br><span class="line">&#125;</span><br><span class="line">事件注册</span><br><span class="line">if (isIE)&#123;window.attachEvent(&quot;onload&quot;, init);&#125;else&#123;window.addEventListener(&quot;load&quot;, init, false);&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="JS高级"><a href="#JS高级" class="headerlink" title="JS高级"></a>JS高级</h2><h3 id="1、什么是-webkit-么-怎么用浏览器的各种工具来调试和-debug-代码"><a href="#1、什么是-webkit-么-怎么用浏览器的各种工具来调试和-debug-代码" class="headerlink" title="1、什么是 webkit 么? 怎么用浏览器的各种工具来调试和 debug 代码?"></a>1、什么是 webkit 么? 怎么用浏览器的各种工具来调试和 debug 代码?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Webkit 是浏览器引擎，包括 html 渲染和 js 解析功能，手机浏览器的主流内核，与之相对应的引擎有 Gecko（Mozilla Firefox 等使用）和 Trident（也称 MSHTML，IE 使用）。</span><br><span class="line">对于浏览器的调试工具要熟练使用，主要是页面结构分析，后台请求信息查看，js 调试工具使用，熟练使用这些工具可以快速提高解决问题的效率</span><br></pre></td></tr></table></figure>
+<h3 id="2、如何测试前端代码-知道-BDD-TDD-Unit-Test-么-怎么测试你的前端工程-mocha-sinon-jasmin-qUnit"><a href="#2、如何测试前端代码-知道-BDD-TDD-Unit-Test-么-怎么测试你的前端工程-mocha-sinon-jasmin-qUnit" class="headerlink" title="2、如何测试前端代码? 知道 BDD, TDD, Unit Test 么? 怎么测试你的前端工程(mocha, sinon, jasmin, qUnit..)?"></a>2、如何测试前端代码? 知道 BDD, TDD, Unit Test 么? 怎么测试你的前端工程(mocha, sinon, jasmin, qUnit..)?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">了解 BDD 行为驱动开发与 TDD 测试驱动开发已经单元测试相关概念</span><br></pre></td></tr></table></figure>
+<h3 id="3、前端-templating-Mustache-underscore-handlebars-是干嘛的-怎么用"><a href="#3、前端-templating-Mustache-underscore-handlebars-是干嘛的-怎么用" class="headerlink" title="3、前端 templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?"></a>3、前端 templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Web 模板引擎是为了使用户界面与业务数据（内容）分离而产生的，Mustache 是一个 logic-less （轻逻辑）模板解析引擎，它的优势在于可以应用在Javascript、PHP、Python、Perl 等多种编程语言中。</span><br><span class="line">Underscore 封装了常用的 JavaScript 对象操作方法，用于提高开发效率。</span><br><span class="line">Handlebars 是 JavaScript 一个语义模板库，通过对 view 和 data 的分离来快速构建Web 模板。</span><br></pre></td></tr></table></figure>
+<h3 id="4、-Javascript-作用域链"><a href="#4、-Javascript-作用域链" class="headerlink" title="4、 Javascript 作用域链?"></a>4、 Javascript 作用域链?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">理解变量和函数的访问范围和生命周期，全局作用域与局部作用域的区别，JavaScript中没有块作用域，函数的嵌套形成不同层次的作用域，嵌套的层次形成链式形式，通过作用域链查找属性的规则需要深入理解。</span><br></pre></td></tr></table></figure>
+<h3 id="5、-谈谈-this-对象的理解。"><a href="#5、-谈谈-this-对象的理解。" class="headerlink" title="5、 谈谈 this 对象的理解。"></a>5、 谈谈 this 对象的理解。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">理解不同形式的函数调用方式下的 this 指向，理解事件函数、定时函数中的 this 指向，函数的调用形式决定了 this 的指向。</span><br></pre></td></tr></table></figure>
+<h3 id="6、-eval-是做什么的？"><a href="#6、-eval-是做什么的？" class="headerlink" title="6、 eval 是做什么的？"></a>6、 eval 是做什么的？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">它的功能是把对应的字符串解析成 JS 代码并运行；应该避免使用 eval，不安全，非常耗性能（2 个步骤，一次解析成 js 语句，一次执行）</span><br></pre></td></tr></table></figure>
+<h3 id="7、-关于事件，IE-与火狐的事件机制有什么区别？-如何阻止冒泡？"><a href="#7、-关于事件，IE-与火狐的事件机制有什么区别？-如何阻止冒泡？" class="headerlink" title="7、 关于事件，IE 与火狐的事件机制有什么区别？ 如何阻止冒泡？"></a>7、 关于事件，IE 与火狐的事件机制有什么区别？ 如何阻止冒泡？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[1].在 IE 中,事件对象是作为一个全局变量来保存和维护的.所有的浏览器事件,不管是用</span><br><span class="line">户触发的，还是其他事件,都会更新 window.event 对象.所以在代码中，只要调用</span><br><span class="line">window.event 就可以获取事件对象， 再 event.srcElement 就可以取得触发事件的元素进</span><br><span class="line">行进一步处理.</span><br><span class="line">[2].在 FireFox 中，事件对象却不是全局对象，一般情况下，是现场发生，现场使用，FireFox</span><br><span class="line">把事件对象自动传给事件处理程序. 关于事件的兼容性处理要熟练掌握，事件对象具体哪些属性存在兼容性问题，IE 与标准事</span><br><span class="line">件模型事件冒泡与事件捕获的支持要理解</span><br></pre></td></tr></table></figure>
+<h3 id="8、-什么是闭包（closure），为什么要用它？"><a href="#8、-什么是闭包（closure），为什么要用它？" class="headerlink" title="8、 什么是闭包（closure），为什么要用它？"></a>8、 什么是闭包（closure），为什么要用它？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">简单的理解是函数的嵌套形成闭包，闭包包括函数本身已经它的外部作用域</span><br><span class="line">使用闭包可以形成独立的空间，延长变量的生命周期，报存中间状态值</span><br></pre></td></tr></table></figure>
+<h3 id="9、new-操作符具体干了什么呢"><a href="#9、new-操作符具体干了什么呢" class="headerlink" title="9、new 操作符具体干了什么呢?"></a>9、new 操作符具体干了什么呢?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。</span><br><span class="line">2、属性和方法被加入到 this 引用的对象中。</span><br><span class="line">3、新创建的对象由 this 所引用，并且最后隐式的返回 this 。</span><br></pre></td></tr></table></figure>
+<h3 id="10、js-延迟加载的方式有哪些？"><a href="#10、js-延迟加载的方式有哪些？" class="headerlink" title="10、js 延迟加载的方式有哪些？"></a>10、js 延迟加载的方式有哪些？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">方案一：&lt;script&gt;标签的 async=&quot;async&quot;属性（详细参见：script 标签的 async 属性）</span><br><span class="line">方案二：&lt;script&gt;标签的 defer=defer属性</span><br><span class="line">方案三：动态创建&lt;script&gt;标签</span><br><span class="line">方案四：AJAX eval（使用 AJAX 得到脚本内容，然后通过 eval_r(xmlhttp.responseText)</span><br><span class="line">来运行脚本）</span><br><span class="line">方案五：iframe 方式</span><br></pre></td></tr></table></figure>
+<h3 id="11、模块化开发怎么做？"><a href="#11、模块化开发怎么做？" class="headerlink" title="11、模块化开发怎么做？"></a>11、模块化开发怎么做？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">理解模块化开发模式：浏览器端 requirejs，seajs；服务器端 nodejs；ES6 模块化；fis、</span><br><span class="line">webpack 等前端整体模块化解决方案；grunt、gulp 等前端工作流的使用</span><br></pre></td></tr></table></figure>
+<h3 id="12、requireJS-的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何-缓存的？）"><a href="#12、requireJS-的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何-缓存的？）" class="headerlink" title="12、requireJS 的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）"></a>12、requireJS 的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">核心是 js 的加载模块，通过正则匹配模块以及模块的依赖关系，保证文件加载的先后顺序，根据文件的路径对加载过的文件做了缓存</span><br></pre></td></tr></table></figure>
+<h3 id="13、数组和对象有哪些原生方法，列举一下？"><a href="#13、数组和对象有哪些原生方法，列举一下？" class="headerlink" title="13、数组和对象有哪些原生方法，列举一下？"></a>13、数组和对象有哪些原生方法，列举一下？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Array.concat( ) 连接数组</span><br><span class="line">Array.join( ) 将数组元素连接起来以构建一个字符串</span><br><span class="line">Array.length 数组的大小</span><br><span class="line">Array.pop( ) 删除并返回数组的最后一个元素</span><br><span class="line">Array.push( ) 给数组添加元素</span><br><span class="line">Array.reverse( ) 颠倒数组中元素的顺序</span><br><span class="line">Array.shift( ) 将元素移出数组</span><br><span class="line">Array.slice( ) 返回数组的一部分</span><br><span class="line">Array.sort( ) 对数组元素进行排序</span><br><span class="line">Array.splice( ) 插入、删除或替换数组的元素</span><br><span class="line">Array.toLocaleString( ) 把数组转换成局部字符串</span><br><span class="line">Array.toString( ) 将数组转换成一个字符串</span><br><span class="line">Array.unshift( ) 在数组头部插入一个元素</span><br><span class="line">Object 对象的常用方法</span><br><span class="line">Object.hasOwnProperty( ) 检查属性是否被继承</span><br><span class="line">Object.isPrototypeOf( ) 一个对象是否是另一个对象的原型</span><br><span class="line">Object.propertyIsEnumerable( ) 是否可以通过 for/in 循环看到属性</span><br><span class="line">Object.toLocaleString( ) 返回对象的本地字符串表示</span><br><span class="line">Object.toString( ) 定义一个对象的字符串表示</span><br><span class="line">Object.valueOf( ) 指定对象的原始值</span><br></pre></td></tr></table></figure>
+<h3 id="14、如何编写高性能的-Javascript？"><a href="#14、如何编写高性能的-Javascript？" class="headerlink" title="14、如何编写高性能的 Javascript？"></a>14、如何编写高性能的 Javascript？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">使用 DocumentFragment 优化多次 append</span><br><span class="line">通过模板元素 clone ，替代 createElement</span><br><span class="line">使用一次 innerHTML 赋值代替构建 dom 元素</span><br><span class="line">使用 firstChild 和 nextSibling 代替 childNodes 遍历 dom 元素</span><br><span class="line">使用 Array 做为 StringBuffer ，代替字符串拼接的操作</span><br><span class="line">将循环控制量保存到局部变量</span><br><span class="line">顺序无关的遍历时，用 while 替代 for</span><br><span class="line">将条件分支，按可能性顺序从高到低排列</span><br><span class="line">在同一条件子的多（ &gt;2 ）条件分支时，使用 switch 优于 if</span><br><span class="line">使用三目运算符替代条件分支</span><br><span class="line">需要不断执行的时候，优先考虑使用 setInterval</span><br></pre></td></tr></table></figure>
+<h3 id="15、javascript-对象的几种创建方式？"><a href="#15、javascript-对象的几种创建方式？" class="headerlink" title="15、javascript 对象的几种创建方式？"></a>15、javascript 对象的几种创建方式？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. 工厂模式</span><br><span class="line">2. 构造函数模式</span><br><span class="line">3. 原型模式</span><br><span class="line">4. 混合构造函数和原型模式</span><br><span class="line">5. 动态原型模式</span><br><span class="line">6. 寄生构造函数模式</span><br><span class="line">7. 稳妥构造函数模式</span><br></pre></td></tr></table></figure>
+<h3 id="16、javascript-继承的-6-种方法？"><a href="#16、javascript-继承的-6-种方法？" class="headerlink" title="16、javascript 继承的 6 种方法？"></a>16、javascript 继承的 6 种方法？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 原型链继承</span><br><span class="line">2. 借用构造函数继承</span><br><span class="line">3. 组合继承(原型+借用构造)</span><br><span class="line">4. 原型式继承</span><br><span class="line">5. 寄生式继承</span><br><span class="line">6. 寄生组合式继承</span><br></pre></td></tr></table></figure>
+<h3 id="17、eval-是做什么的？"><a href="#17、eval-是做什么的？" class="headerlink" title="17、eval 是做什么的？"></a>17、eval 是做什么的？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 它的功能是把对应的字符串解析成 JS 代码并运行</span><br><span class="line">2. 应该避免使用 eval，不安全，非常耗性能（2 次，一次解析成 js 语句，一次执行）</span><br></pre></td></tr></table></figure>
+<h3 id="18、JavaScript-原型，原型链-有什么特点？"><a href="#18、JavaScript-原型，原型链-有什么特点？" class="headerlink" title="18、JavaScript 原型，原型链 ? 有什么特点？"></a>18、JavaScript 原型，原型链 ? 有什么特点？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 原型对象也是普通的对象，是对象一个自带隐式的 __proto__ 属性，原型也有可能有自己的原型，如果一个原型对象的原型不为 null 的话，我们就称之为原型链</span><br><span class="line">2. 原型链是由一些用来继承和共享属性的对象组成的（有限的）对象链</span><br></pre></td></tr></table></figure>
+<h3 id="19、分别阐述-split-slice-splice-join-？"><a href="#19、分别阐述-split-slice-splice-join-？" class="headerlink" title="19、分别阐述 split(),slice(),splice(),join()？"></a>19、分别阐述 split(),slice(),splice(),join()？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">join()用于把数组中的所有元素拼接起来放入一个字符串。所带的参数为分割字符串的分隔符，默认是以逗号分开。归属于 Array</span><br><span class="line">split()即把字符串分离开，以数组方式存储。归属于 Stringstring</span><br><span class="line">slice()方法可从已有的数组中返回选定的元素。该方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()</span><br><span class="line">splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。返回的是含有被删除的元素的数组。</span><br></pre></td></tr></table></figure>
+<h3 id="20、http-状态码有那些？分别代表是什么意思？"><a href="#20、http-状态码有那些？分别代表是什么意思？" class="headerlink" title="20、http 状态码有那些？分别代表是什么意思？"></a>20、http 状态码有那些？分别代表是什么意思？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">100-199 用于指定客户端应相应的某些动作。</span><br><span class="line">200-299 用于表示请求成功。</span><br><span class="line">300-399 用于已经移动的文件并且常被包含在定位头信息中指定新的地址信息。</span><br><span class="line">400-499 用于指出客户端的错误。</span><br><span class="line">400 语义有误，当前请求无法被服务器理解。</span><br><span class="line">401 当前请求需要用户验证</span><br><span class="line">403 服务器已经理解请求，但是拒绝执行它。</span><br><span class="line">500-599 用于支持服务器错误。</span><br><span class="line">503 – 服务不可用</span><br></pre></td></tr></table></figure>
+<h3 id="21、针对-jQuery-的优化方法？"><a href="#21、针对-jQuery-的优化方法？" class="headerlink" title="21、针对 jQuery 的优化方法？"></a>21、针对 jQuery 的优化方法？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">优先使用 ID 选择器</span><br><span class="line">jquery 获取到的 DOM 元素如果需要多次使用，建议使用一个变量将其保存起来，因为操作 DOM 的过程是非常耗费性能的</span><br><span class="line">在 class 前使用 tag(标签名)</span><br><span class="line">给选择器一个上下文</span><br><span class="line">慎用 .live()方法（应该说尽量不要使用）</span><br><span class="line">使用 data()方法存储临时变量</span><br></pre></td></tr></table></figure>
+<h3 id="22、Zepto-的点透问题如何解决？"><a href="#22、Zepto-的点透问题如何解决？" class="headerlink" title="22、Zepto 的点透问题如何解决？"></a>22、Zepto 的点透问题如何解决？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">点透主要是由于两个 div 重合，例如：一个 div 调用 show()，一个 div 调用 hide()；</span><br><span class="line">这个时候当点击上面的 div 的时候就会影响到下面的那个 div；</span><br><span class="line">解决办法主要有 2 种：</span><br><span class="line">github 上有一个叫做 fastclick 的库，它也能规避移动设备上 click 事件的延迟响</span><br><span class="line">应，https://github.com/ftlabs/fastclick</span><br><span class="line">将它用 script 标签引入页面（该库支持 AMD，于是你也可以按照 AMD 规范，用诸如</span><br><span class="line">require.js 的模块加载器引入），并且在 dom ready 时初始化在 body 上，</span><br><span class="line">根据分析，如果不引入其它类库，也不想自己按照上述 fastclcik 的思路再开发一套</span><br><span class="line">东西，需要 1.一个优先于下面的“divClickUnder”捕获的事件；2.并且通过这个事件</span><br><span class="line">阻止掉默认行为（下面的“divClickUnder”对 click 事件的捕获，在 ios 的 safari，</span><br><span class="line">click 的捕获被认为和滚屏、点击输入框弹起键盘等一样，是一种浏览器默认行为，即</span><br><span class="line">可以被 event.preventDefault()阻止的行为）。</span><br></pre></td></tr></table></figure>
+<h3 id="23、知道各种-JS-框架-Angular-Backbone-Ember-React-Meteor-Knockout…-么-能讲出他们各自的优点和缺点么"><a href="#23、知道各种-JS-框架-Angular-Backbone-Ember-React-Meteor-Knockout…-么-能讲出他们各自的优点和缺点么" class="headerlink" title="23、知道各种 JS 框架(Angular, Backbone, Ember, React, Meteor, Knockout…)么? 能讲出他们各自的优点和缺点么?"></a>23、知道各种 JS 框架(Angular, Backbone, Ember, React, Meteor, Knockout…)么? 能讲出他们各自的优点和缺点么?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">知识面的宽度，流行框架要多多熟悉</span><br><span class="line">angular、backbone、knockout 都是完整的 MV*框架</span><br><span class="line">angular 是双向数据绑定的，backbone、knockout 是单向数据绑定的</span><br><span class="line">React 只是单纯地 View 层</span><br></pre></td></tr></table></figure>
+<h3 id="24、对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？"><a href="#24、对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？" class="headerlink" title="24、对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？"></a>24、对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">前端是最贴近用户的程序员，比后端、数据库、产品经理、运营、安全都近。</span><br><span class="line">实现界面交互</span><br><span class="line">提升用户体验</span><br><span class="line">有了 Node.js，前端可以实现服务端的一些事情</span><br><span class="line">前端是最贴近用户的程序员，前端的能力就是能让产品从 90 分进化到 100 分，甚至更好，</span><br><span class="line">参与项目，快速高质量完成实现效果图，精确到 1px；</span><br><span class="line">与团队成员，UI 设计，产品经理的沟通；</span><br><span class="line">做好的页面结构，页面重构和用户体验；</span><br><span class="line">处理 hack，兼容、写出优美的代码格式；</span><br><span class="line">针对服务器的优化、拥抱最新前端技术。</span><br><span class="line">其它相关的加分项：</span><br><span class="line">都使用和了解过哪些编辑器?都使用和了解过哪些日常工具?</span><br><span class="line">都知道有哪些浏览器内核?开发过的项目都兼容哪些浏览器?</span><br><span class="line">瀑布流布局或者流式布局是否有了解</span><br><span class="line">HTML5 都有哪些新的 API?</span><br><span class="line">都用过什么代码调试工具?</span><br><span class="line">是否有接触过或者了解过重构。</span><br><span class="line">你遇到过比较难的技术问题是？你是如何解决的？</span><br></pre></td></tr></table></figure>
+<h2 id="NodeJs"><a href="#NodeJs" class="headerlink" title="NodeJs"></a>NodeJs</h2><h3 id="1、对-Node-的优点和缺点提出了自己的看法："><a href="#1、对-Node-的优点和缺点提出了自己的看法：" class="headerlink" title="1、对 Node 的优点和缺点提出了自己的看法："></a>1、对 Node 的优点和缺点提出了自己的看法：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">（优点）因为 Node 是基于事件驱动和无阻塞的，所以非常适合处理并发请求，因此构建在 Node 上的代理服务器相比其他技术实现（如 Ruby）的服务器表现要好得多。此外，与 Node 代理服务器交互的客户端代码是由 javascript 语言编写的，因此客户端和服务器端都用同一种语言编写，这是非常美妙的事情。</span><br><span class="line">（缺点）Node 是一个相对新的开源项目，所以不太稳定，它总是一直在变，而且缺少足够多的第三方库支持。看起来，就像是 Ruby/Rails 当年的样子。</span><br></pre></td></tr></table></figure>
+<h3 id="2、需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？"><a href="#2、需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？" class="headerlink" title="2、需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？"></a>2、需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">至少给出自己的思路（url-hash,可以使用已有的一些框架 history.js 等）</span><br></pre></td></tr></table></figure>
+<h3 id="3、Node-js-的适用场景？"><a href="#3、Node-js-的适用场景？" class="headerlink" title="3、Node.js 的适用场景？"></a>3、Node.js 的适用场景？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">实时应用：如在线聊天，实时通知推送等等（如 socket.io）</span><br><span class="line">分布式应用：通过高效的并行 I/O 使用已有的数据</span><br><span class="line">工具类应用：海量的工具，小到前端压缩部署（如 grunt），大到桌面图形界面应用程序</span><br><span class="line">游戏类应用：游戏领域对实时和并发有很高的要求（如网易的 pomelo 框架）</span><br><span class="line">利用稳定接口提升 Web 渲染能力</span><br><span class="line">前后端编程语言环境统一：前端开发人员可以非常快速地切入到服务器端的开发（如著名的纯 Javascript 全栈式 MEAN 架构）</span><br></pre></td></tr></table></figure>
+<h3 id="4、-如果会用-node-知道-route-middleware-cluster-nodemon-pm2-server-side-rendering-么"><a href="#4、-如果会用-node-知道-route-middleware-cluster-nodemon-pm2-server-side-rendering-么" class="headerlink" title="4、(如果会用 node)知道 route, middleware, cluster, nodemon, pm2, server-side rendering 么?"></a>4、(如果会用 node)知道 route, middleware, cluster, nodemon, pm2, server-side rendering 么?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Nodejs 相关概念的理解程度</span><br></pre></td></tr></table></figure>
+<h3 id="5、解释一下-Backbone-的-MVC-实现方式"><a href="#5、解释一下-Backbone-的-MVC-实现方式" class="headerlink" title="5、解释一下 Backbone 的 MVC 实现方式"></a>5、解释一下 Backbone 的 MVC 实现方式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">流行的 MVC 架构模式</span><br></pre></td></tr></table></figure>
+<h3 id="6、什么是“前端路由”-什么时候适合使用“前端路由”-“前端路由”有哪些优点和缺点"><a href="#6、什么是“前端路由”-什么时候适合使用“前端路由”-“前端路由”有哪些优点和缺点" class="headerlink" title="6、什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?"></a>6、什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">熟悉前后端通信相关知识</span><br><span class="line">前端路由就是在不进行后端请求的情况下对页面进行跳转</span><br></pre></td></tr></table></figure>
+<h3 id="7、对-Node-的优点和缺点提出了自己的看法？"><a href="#7、对-Node-的优点和缺点提出了自己的看法？" class="headerlink" title="7、对 Node 的优点和缺点提出了自己的看法？"></a>7、对 Node 的优点和缺点提出了自己的看法？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">因为 Node 是基于事件驱动和无阻塞的，所以非常适合处理并发请求，因此构建在 Node上的代理服务器相比其他技术实现（如 Ruby）的服务器表现要好得多。</span><br><span class="line">与 Node 代理服务器交互的客户端代码是由 javascript 语言编写的，因此客户端和服务</span><br><span class="line">器端都用同一种语言编写，这是非常美妙的事情。</span><br><span class="line">缺点：</span><br><span class="line">Node 是一个相对新的开源项目，所以不太稳定，它总是一直在变。</span><br><span class="line">缺少足够多的第三方库支持。看起来，就像是 Ruby/Rails 当年的样子（第三方库现在已经很丰富了，所以这个缺点可以说不存在了）。</span><br></pre></td></tr></table></figure>
+<h2 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h2><h3 id="1、如何解决跨域问题"><a href="#1、如何解决跨域问题" class="headerlink" title="1、如何解决跨域问题?"></a>1、如何解决跨域问题?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">理解跨域的概念：协议、域名、端口都相同才同域，否则都是跨域</span><br><span class="line">出于安全考虑，服务器不允许 ajax 跨域获取数据，但是可以跨域获取文件内容，所以基于这一点，可以动态创建 script 标签，使用标签的 src 属性访问 js 文件的形式获取 js脚本，并且这个 js 脚本中的内容是函数调用，该函数调用的参数是服务器返回的数据，为了获取这里的参数数据，需要事先在页面中定义回调函数，在回调函数中处理服务器返回的数据，这就是解决跨域问题的主流解决方案</span><br></pre></td></tr></table></figure>
+<h3 id="2、页面编码和被请求的资源编码如果不一致如何处理？"><a href="#2、页面编码和被请求的资源编码如果不一致如何处理？" class="headerlink" title="2、页面编码和被请求的资源编码如果不一致如何处理？"></a>2、页面编码和被请求的资源编码如果不一致如何处理？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">对于 ajax 请求传递的参数，如果是 get 请求方式，参数如果传递中文，在有些浏览器会乱码，不同的浏览器对参数编码的处理方式不同，所以对于 get 请求的参数需要使用encodeURIComponent 函数对参数进行编码处理，后台开发语言都有相应的解码 api。对于 post 请求不需要进行编码</span><br></pre></td></tr></table></figure>
+<h3 id="3、简述-ajax-的过程。"><a href="#3、简述-ajax-的过程。" class="headerlink" title="3、简述 ajax 的过程。"></a>3、简述 ajax 的过程。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">创建 XMLHttpRequest 对象,也就是创建一个异步调用对象</span><br><span class="line">创建一个新的 HTTP 请求,并指定该 HTTP 请求的方法、URL 及验证信息</span><br><span class="line">设置响应 HTTP 请求状态变化的函数</span><br><span class="line">发送 HTTP 请求</span><br><span class="line">获取异步调用返回的数据</span><br><span class="line">使用 JavaScript 和 DOM 实现局部刷新</span><br></pre></td></tr></table></figure>
+<h3 id="4、阐述一下异步加载。"><a href="#4、阐述一下异步加载。" class="headerlink" title="4、阐述一下异步加载。"></a>4、阐述一下异步加载。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">异步加载的方案： 动态插入 script 标签</span><br><span class="line">通过 ajax 去获取 js 代码，然后通过 eval 执行</span><br><span class="line">script 标签上添加 defer 或者 async 属性</span><br><span class="line">创建并插入 iframe，让它异步执行 js</span><br></pre></td></tr></table></figure>
+<h3 id="5、解释-jsonp-的原理，以及为什么不是真正的-ajax"><a href="#5、解释-jsonp-的原理，以及为什么不是真正的-ajax" class="headerlink" title="5、解释 jsonp 的原理，以及为什么不是真正的 ajax"></a>5、解释 jsonp 的原理，以及为什么不是真正的 ajax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Jsonp 并不是一种数据格式，而 json 是一种数据格式，jsonp 是用来解决跨域获取数据的一种解决方案，具体是通过动态创建 script 标签，然后通过标签的 src 属性获取 js 文件中的 js 脚本，该脚本的内容是一个函数调用，参数就是服务器返回的数据，为了处理这些返回的数据，需要事先在页面定义好回调函数，本质上使用的并不是 ajax 技术</span><br></pre></td></tr></table></figure>
+<h3 id="6、什么是-Ajax-和-JSON，它们的优缺点。"><a href="#6、什么是-Ajax-和-JSON，它们的优缺点。" class="headerlink" title="6、什么是 Ajax 和 JSON，它们的优缺点。"></a>6、什么是 Ajax 和 JSON，它们的优缺点。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Ajax 是全称是 asynchronous JavaScript andXML，即异步 JavaScript 和 xml，用于在Web 页面中实现异步数据交互，实现页面局部刷新。</span><br><span class="line">优点：可以使得页面不重载全部内容的情况下加载局部内容，降低数据传输量，避免用户不断刷新或者跳转页面，提高用户体验</span><br><span class="line">缺点：对搜索引擎不友好；要实现 ajax 下的前后退功能成本较大；可能造成请求数的增加跨域问题限制；JSON 是一种轻量级的数据交换格式，ECMA 的一个子集</span><br><span class="line">优点：轻量级、易于人的阅读和编写，便于机器（JavaScript）解析，支持复合数据类型（数组、对象、字符串、数字）</span><br></pre></td></tr></table></figure>
+<h3 id="7、一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？"><a href="#7、一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？" class="headerlink" title="7、一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？"></a>7、一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">分为 4 个步骤：</span><br><span class="line">当发送一个 URL 请求时，不管这个 URL 是 Web 页面的 URL 还是 Web 页面上每个资源的 URL，浏览器都会开启一个线程来处理这个请求，同时在远程 DNS 服务器上启动一个 DNS查询。这能使浏览器获得请求对应的 IP 地址。</span><br><span class="line">浏览器与远程 Web 服务器通过 TCP 三次握手协商来建立一个 TCP/IP 连接。该握手包括一个同步报文，一个同步-应答报文和一个应答报文，这三个报文在 浏览器和服务器之间传递。该握手首先由客户端尝试建立起通信，而后服务器应答并接受客户端的请求，最后由客户端发出该请求已经被接受的报文。</span><br><span class="line">一旦 TCP/IP 连接建立，浏览器会通过该连接向远程服务器发送 HTTP 的 GET 请求。远程服务器找到资源并使用 HTTP 响应返回该资源，值为 200 的 HTTP 响应状态表示一个正确的响应。</span><br><span class="line">此时，Web 服务器提供资源服务，客户端开始下载资源。</span><br></pre></td></tr></table></figure>
+<h3 id="8、ajax-请求的时候-get-和-post-方式的区别"><a href="#8、ajax-请求的时候-get-和-post-方式的区别" class="headerlink" title="8、ajax 请求的时候 get 和 post 方式的区别"></a>8、ajax 请求的时候 get 和 post 方式的区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">get 一般用来进行查询操作，url 地址有长度限制，请求的参数都暴露在 url 地址当中，如果传递中文参数，需要自己进行编码操作，安全性较低。</span><br><span class="line">post 请求方式主要用来提交数据，没有数据长度的限制，提交的数据内容存在于 http请求体中，数据不会暴漏在 url 地址中。</span><br></pre></td></tr></table></figure>
+<h3 id="9、ajax-请求时，如何解释-json-数据"><a href="#9、ajax-请求时，如何解释-json-数据" class="headerlink" title="9、ajax 请求时，如何解释 json 数据"></a>9、ajax 请求时，如何解释 json 数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用 eval() 或者 JSON.parse() 鉴于安全性考虑，推荐使用 JSON.parse()更靠谱，对数据的安全性更好。</span><br></pre></td></tr></table></figure>
+<h3 id="10、两个数组的差集"><a href="#10、两个数组的差集" class="headerlink" title="10、两个数组的差集"></a>10、两个数组的差集</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">方法一：</span><br><span class="line">function arrChange( a, b )&#123;</span><br><span class="line">	var resultData = [];</span><br><span class="line">	for(var i = 0; i &lt; a.length; i++)&#123;</span><br><span class="line">	    var flag = false;</span><br><span class="line">	    for(var j = 0; j &lt; b.length; j++)&#123;</span><br><span class="line">	        if(b[j].id == a[i].id)&#123;</span><br><span class="line">	            flag = true;</span><br><span class="line">	            break;</span><br><span class="line">	        &#125;</span><br><span class="line">	    &#125;</span><br><span class="line">	    if(!flag)&#123;</span><br><span class="line">	        resultData.push(a[i]);</span><br><span class="line">	    &#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">方法二：</span><br><span class="line">function arrChange( a, b )&#123;</span><br><span class="line">    for (var i = 0; i &lt; b.length; i++) &#123;</span><br><span class="line">        for (var j = 0; j &lt; a.length; j++) &#123;</span><br><span class="line">            if (a[j].id == b[i].id) &#123;</span><br><span class="line">                a.splice(j, 1);</span><br><span class="line">                j = j - 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+            <div class="article-tags tags">
+                
+                    <a href="/tags/前端/"><i class="fa fa-tag"></i>&nbsp;&nbsp;前端</a>
+                
+                    <a href="/tags/Javascript/"><i class="fa fa-tag"></i>&nbsp;&nbsp;Javascript</a>
+                
+                    <a href="/tags/Jquery/"><i class="fa fa-tag"></i>&nbsp;&nbsp;Jquery</a>
+                
+                    <a href="/tags/Zepto/"><i class="fa fa-tag"></i>&nbsp;&nbsp;Zepto</a>
+                
+                    <a href="/tags/Ajax/"><i class="fa fa-tag"></i>&nbsp;&nbsp;Ajax</a>
+                
+                    <a href="/tags/Json/"><i class="fa fa-tag"></i>&nbsp;&nbsp;Json</a>
+                
+                    <a href="/tags/Nodejs/"><i class="fa fa-tag"></i>&nbsp;&nbsp;Nodejs</a>
+                
+                    <a href="/tags/Requirejs/"><i class="fa fa-tag"></i>&nbsp;&nbsp;Requirejs</a>
+                
+                    <a href="/tags/面试题/"><i class="fa fa-tag"></i>&nbsp;&nbsp;面试题</a>
+                
+            </div>
+        
+        
+            <div class="art-item-footer">
+                
+                    <span class="art-item-left">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>&nbsp;
+                        <a href="/2018/08/20/s-chunni/" rel="prev" title="春泥无芬">
+                            春泥无芬
+                        </a>
+                    </span>
+                
+                
+                    <span class="art-item-right">
+                        <a href="/2018/08/15/s-luoye/" rel="next" title="落叶无痕">
+                            落叶无痕
+                        </a>&nbsp;
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </span>
+                
+            </div>
+        
+    </section>
+</article>
+
+<style>
+    .reward{text-align: center; font-size: 15px; margin: 20px 0 !important;}
+    .reward .notes{ color:#ff9800;}
+    .reward .btn{margin-top: 20px;}
+    .reward .btn a{background: #5CC281;color: #ffffff; padding: 8px 30px; border-radius: 6px;}
+    .reward .btn a:hover{background: #358451;}
+    .reward .code{display: none;}
+    .reward:hover .code{margin-top: 20px;display: flex;}
+    .reward:hover .code dl{flex: 1;}
+    .reward:hover .code dl dt{}
+    .reward:hover .code dl dt img.pic{width:160px;height: 160px;}
+    .reward:hover .code dl dd{letter-spacing: 2px;}
+</style>
+<article class="post white-box reward">
+    <div class="notes">打赏我的人，运气都不会太差！</div>
+    <div class="btn"><a>打 赏</a></div>
+    <div class="code">
+        <dl>
+            <dt><img class="pic" src='http://pdliii7ak.bkt.clouddn.com/%E6%94%AF%E4%BB%98%E5%AE%9D.jpg' /></dt>
+            <dd>支付宝打赏</dd>
+        </dl>
+        <dl>
+            <dt><img class="pic" src='http://pdliii7ak.bkt.clouddn.com/%E5%BE%AE%E4%BF%A1.jpg' /></dt>
+            <dd>微信打赏</dd>
+        </dl>
+    </div>
+</article>
+
+<!-- 显示推荐文章 -->
+
+<article class="post white-box article-type-post>">
+    <section class="article typo">
+        
+        
+
+    <div class="recommended_posts">
+        <h4><i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;你可能感兴趣的文章</h4> 
+        <ul>
+            
+                <li><a href="https://daijc.github.io/2018/08/20/q-es6xtx/">ES6 新增特性练习题</a></li>
+            
+                <li><a href="https://daijc.github.io/2018/08/20/s-chunni/">春泥无芬</a></li>
+            
+                <li><a href="https://daijc.github.io/2018/08/15/s-luoye/">落叶无痕</a></li>
+            
+                <li><a href="https://daijc.github.io/2017/11/17/q-jsal/">JS练习题</a></li>
+            
+        </ul>
+    </div>
+
+
+        
+    </section>
+</article>
+
+<br>
+
+<!-- 显示评论 -->
+
+<article class="post white-box article-type-post>">
+    <section class="article typo">
+        
+            
+                <h4><i class="fa fa-comments" aria-hidden="true"></i>&nbsp;&nbsp;评论</h4>
+            
+            
+            
+            
+                
+                    <section id="comments">
+                        <div id="valine_container" class="valine_thread">
+                            </i><i class="fa fa-spinner fa-spin fa-fw"></i>
+                        </div>
+                    </section>
+                
+            
+        
+    </section>
+</article>
+
+
+<script>
+    window.subData = {
+        title: 'JS常见面试题',
+        tools: true
+    }
+</script>
+
+
+      </div>
+      <aside class='l_side'>
+        
+	
+
+	
+
+	
+
+      </aside>
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+
+    <div class="social-wrapper">
+        
+    </div>
+    <br>
+
+    <div>博客内容遵循知识共享协议</div>
+
+    <div>本站使用 Material-X 主题，
+		总访问量为 <span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+    </div>
+
+</footer>
+
+  <script>setLoadingBarProgress(80);</script>
+  <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src='//cdn.bootcss.com/node-waves/0.7.5/waves.min.js'></script>
+<script src="//cdn.bootcss.com/scrollReveal.js/3.3.2/scrollreveal.min.js"></script>
+<!-- 访问统计 -->
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 推荐文章 -->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script>
+var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+var ALGOLIA_API_KEY = "";
+var ALGOLIA_APP_ID = "";
+var ALGOLIA_INDEX_NAME = "";
+var AZURE_SERVICE_NAME = "";
+var AZURE_INDEX_NAME = "";
+var AZURE_QUERY_KEY = "";
+var BAIDU_API_ID = "";
+var SEARCH_SERVICE = "hexo";
+var ROOT = "/"||"/";
+if(!ROOT.endsWith('/'))ROOT += '/';
+</script>
+<script src="/js/search.js"></script>
+<script src="/js/app.js"></script>
+
+
+    
+    
+    
+        
+            <script>
+            var GUEST_INFO = ['nick','mail','link'];
+            var guest_info = 'nick,mail'.split(',').filter(function(item){
+                return GUEST_INFO.indexOf(item) > -1
+            });
+            var notify = 'false' == true;
+            var verify = 'false' == true;
+            var valine = new Valine();
+            valine.init({
+                el: '#valine_container',
+                notify: notify,
+                verify: verify,
+                guest_info: guest_info,
+                appId: "bEFytQ4Rpyo4jzlqfudykpsp-gzGzoHsz",
+                appKey: "9TNjGhdqST9S4QB3yieeAeEC",
+                placeholder: "快来评论吧~",
+                pageSize:'10',
+                avatar:'mp',
+                lang:'zh-cn'
+            })
+            </script>
+        
+    
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
